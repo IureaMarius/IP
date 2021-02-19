@@ -33,12 +33,13 @@ namespace LAB1
             Guid examID = prof.CreateExam(questions, 300);
 
             Student examTaker = new Student();
-            examTaker.currentExam = prof.Exams[examID];
+            examTaker.AssignExam(prof.Exams[examID]);
+            examTaker.changeCurrentExam(0);
 
             string command = null;
-            while(examTaker.currentExam.getRemainingTime() > 0)
+            while(examTaker.GetRemainingTime() > 0)
             {
-                Console.WriteLine("Remaining time:" + examTaker.currentExam.getRemainingTime() + " seconds");
+                Console.WriteLine("Remaining time:" + examTaker.GetRemainingTime() + " seconds");
                 Console.WriteLine("Available Commands: GetDescription, SetAnswer, Submit, CheckGrade, GetCorrectAnswer");
                 command = Console.ReadLine();
                 string temp;
@@ -47,7 +48,7 @@ namespace LAB1
                     case "GetDescription":
                         Console.WriteLine("Which question number?");
                         temp = Console.ReadLine();
-                        Console.WriteLine(examTaker.currentExam.getQuestionDescription(int.Parse(temp)));
+                        Console.WriteLine(examTaker.getQuestion(int.Parse(temp)));
                         break;
 
                     case "SetAnswer":
@@ -55,20 +56,21 @@ namespace LAB1
                         temp = Console.ReadLine();
                         Console.WriteLine("Answer:");
 
-                        examTaker.currentExam.setQuestionAnswer(int.Parse(temp), Console.ReadLine());
+                        examTaker.answerQuestion(int.Parse(temp), Console.ReadLine());
                         break;
                     case "Submit":
-                        examTaker.currentExam.Submit();
+                        examTaker.Submit();
                         break;
                     case "CheckGrade":
-                        Console.WriteLine("Your grade: " + examTaker.currentExam.CheckGrade());
+                        Console.WriteLine("Your grade: " + examTaker.getGrade());
                         break;
                     case "GetCorrectAnswer":
                         Console.WriteLine("Which question number?");
                         temp = Console.ReadLine();
-                        Console.WriteLine(examTaker.currentExam.getQuestionCorrectAnswer(int.Parse(temp)));
+                        Console.WriteLine(examTaker.getCorrectAnswer(int.Parse(temp)));
                         break;
                     default:
+                        Console.WriteLine("unrecognizable command, please try another command");
                         break;
                 }
                 

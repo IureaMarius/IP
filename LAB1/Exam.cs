@@ -24,7 +24,10 @@ namespace LAB1
         List<Question> Questions;
         public String getQuestionDescription(int index)
         {
-            return Questions[index].Description;
+            if (index >= 0 && index < Questions.Count)
+                return Questions[index].Description;
+            else
+                return null;
 
         }
         public int getRemainingTime()
@@ -41,7 +44,7 @@ namespace LAB1
         {
             if (submitted == true)
                 return Questions?[index].getCorrectAnswerString();
-            else return "You can see the correct answers after you submit the questions.";
+            return null;
         }
         public void Submit()
         {

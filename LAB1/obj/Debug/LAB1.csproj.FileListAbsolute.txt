@@ -5,3 +5,13 @@ C:\Users\M\source\repos\LAB1\obj\Debug\LAB1.csprojAssemblyReference.cache
 C:\Users\M\source\repos\LAB1\obj\Debug\LAB1.csproj.CoreCompileInputs.cache
 C:\Users\M\source\repos\LAB1\obj\Debug\LAB1.exe
 C:\Users\M\source\repos\LAB1\obj\Debug\LAB1.pdb
+C:\Users\M\source\repos\IP\LAB1\bin\Debug\LAB1.exe.config
+C:\Users\M\source\repos\IP\LAB1\bin\Debug\LAB1.exe
+C:\Users\M\source\repos\IP\LAB1\bin\Debug\LAB1.pdb
+C:\Users\M\source\repos\IP\LAB1\obj\Debug\LAB1.csprojAssemblyReference.cache
+C:\Users\M\source\repos\IP\LAB1\obj\Debug\LAB1.csproj.CoreCompileInputs.cache
+C:\Users\M\source\repos\IP\LAB1\obj\Debug\LAB1.exe
+C:\Users\M\source\repos\IP\LAB1\obj\Debug\LAB1.pdb
+C:\Users\M\source\repos\IP\LAB1\bin\Debug\nunit.framework.dll
+C:\Users\M\source\repos\IP\LAB1\bin\Debug\nunit.framework.xml
+C:\Users\M\source\repos\IP\LAB1\obj\Debug\LAB1.csproj.CopyComplete
