@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="row cover-page">
+    <div class="col-3 course-selector">
+        <h4 class="material-list-title"> {{Title}} </h4>
+        <div *ngFor="let material of materials; let i = index" class="material-list-item" (click)="SelectMaterial(i)" [class]="i == selectedMaterialIndex ? 'material-list-item-selected' : ''">
+            {{material.name}} -- {{material.pageTitle}}
+        </div>
+    </div>
+    <div class="col-9 course-viewer">
+        <ng-template [ngIf]="selectedMaterial">
+            <h1> {{selectedMaterial.name}} </h1>
+            <h3> {{selectedMaterial.pageTitle}} </h3>
+            <div *ngFor="let content of selectedMaterial.contentBlocks">
+                <div [ngSwitch]="content.type">
+                    <div *ngSwitchCase="'header'">
+                        <h3>{{content.content}}</h3>
+                    </div>
+                    <div *ngSwitchCase="'image'"> 
+                        <img [src]="content.content" class="content-image" />
+                    </div>
+                    <div *ngSwitchCase="'text'">
+                        {{content.content}}
+                    </div>
+
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
