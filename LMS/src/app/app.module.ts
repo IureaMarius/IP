@@ -13,6 +13,11 @@ import { RoutingModule } from './routing/routing.module';
 import { SubjectPageComponent } from './subject-page/subject-page.component';
 import { HeaderComponent } from './header/header.component';
 import { AppConfigService } from './Services/app-config.service';
+import { ForumBoardsComponent } from './forum-boards/forum-boards.component';
+import { ForumBoardsItemComponent } from './forum-boards-item/forum-boards-item.component';
+import { ForumBoardPostsComponent } from './forum-board-posts/forum-board-posts.component';
+import { ForumBoardPostsItemsComponent } from './forum-board-posts-items/forum-board-posts-items.component';
+import { ForumUserPageComponent } from './forum-user-page/forum-user-page.component';
 
 export function appInit(appConfig: AppConfigService) {
   return () => appConfig.load();
@@ -24,7 +29,12 @@ export function appInit(appConfig: AppConfigService) {
     LearningPageComponent,
     ForgotPasswordComponent,
     SubjectPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    ForumBoardsComponent,
+    ForumBoardsItemComponent,
+    ForumBoardPostsComponent,
+    ForumBoardPostsItemsComponent,
+    ForumUserPageComponent
   ],
   imports: [
     BrowserModule,
