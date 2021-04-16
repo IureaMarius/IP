@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="row subjects-list col-10 centerAlign"> 
+    <div *ngFor="let subject of subjects" class=" col-4" >
+        <div class="subject" (click)="GoToSubjectPage(subject)">
+            <h3 class="subject-text"> 
+                {{subject.name}}
+            </h3>
+        <div>
+    </div>
+
+</div>

@@ -1,0 +1,8 @@
+{
+    "apiUrl": "https://www.testAPI.com/REST/",
+    "endpoints": {
+        "LogIn": "Auth/LogIn",
+        "LogOut": "Auth/LogOut"
+    }
+
+}

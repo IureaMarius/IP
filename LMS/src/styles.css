@@ -1,0 +1,26 @@
+body {
+    background-image: url('./assets/login_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+
+}
+.fullHeight {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+}
+.centerAlign {
+    margin: 0 auto !important;
+}
+.right-float {
+    margin-left: auto;
+}
+
