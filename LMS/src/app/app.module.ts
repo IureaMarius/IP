@@ -16,41 +16,45 @@ import { AppConfigService } from './Services/app-config.service';
 import { ForumBoardsComponent } from './forum-boards/forum-boards.component';
 import { ForumBoardsItemComponent } from './forum-boards-item/forum-boards-item.component';
 import { ForumBoardPostsComponent } from './forum-board-posts/forum-board-posts.component';
-import { ForumBoardPostsItemsComponent } from './forum-board-posts-items/forum-board-posts-items.component';
 import { ForumUserPageComponent } from './forum-user-page/forum-user-page.component';
+import { ForumCommentsComponent } from './forum-comments/forum-comments.component';
+import { ForumCommentsItemComponent } from './forum-comments-item/forum-comments-item.component';
+import { ForumBoardPostsItemComponent } from './forum-board-posts-item/forum-board-posts-item.component';
 
 export function appInit(appConfig: AppConfigService) {
-  return () => appConfig.load();
+    return () => appConfig.load();
 }
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginPageComponent,
-    LearningPageComponent,
-    ForgotPasswordComponent,
-    SubjectPageComponent,
-    HeaderComponent,
-    ForumBoardsComponent,
-    ForumBoardsItemComponent,
-    ForumBoardPostsComponent,
-    ForumBoardPostsItemsComponent,
-    ForumUserPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    RoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule 
-  ],
-  providers: [
-      {
-          provide: APP_INITIALIZER,
-          multi: true,
-          deps: [AppConfigService],
-          useFactory: appInit
-      }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LoginPageComponent,
+        LearningPageComponent,
+        ForgotPasswordComponent,
+        SubjectPageComponent,
+        HeaderComponent,
+        ForumBoardsComponent,
+        ForumBoardsItemComponent,
+        ForumBoardPostsComponent,
+        ForumUserPageComponent,
+        ForumCommentsComponent,
+        ForumCommentsItemComponent,
+        ForumBoardPostsItemComponent
+    ],
+    imports: [
+        BrowserModule,
+        RoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientModule 
+    ],
+    providers: [
+        {
+            provide: APP_INITIALIZER,
+            multi: true,
+            deps: [AppConfigService],
+            useFactory: appInit
+        }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

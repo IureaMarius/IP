@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { ForumManagerService } from '../Services/forum-manager.service';
 @Component({
-  selector: 'app-forum-boards-item',
-  templateUrl: './forum-boards-item.component.html',
-  styleUrls: ['./forum-boards-item.component.css']
+    selector: 'app-forum-boards-item',
+    templateUrl: './forum-boards-item.component.html',
+    styleUrls: ['./forum-boards-item.component.css']
 })
 export class ForumBoardsItemComponent implements OnInit {
 
-  constructor() { }
+    constructor(private forumManager: ForumManagerService) { }
+    @Input() boardData;
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
+
+    public openBoard() {
+        this.forumManager.setSelectedBoard(this.boardData.ID);
+    }
 
 }

@@ -16,11 +16,11 @@ export class ApiManagerService {
     };
     constructor(private appConfigService: AppConfigService,
                 private http: HttpClient) { 
-        this.baseURL = appConfigService.appConfig.apiURL;
+        this.baseURL = appConfigService.appConfig.apiUrl;
         this.endpoints = appConfigService.appConfig.endpoints;
     }
     public LogIn(req) {
-        this.http.post(this.baseURL + this.endpoints.LogIn, JSON.stringify(req), httpOptions);
+        this.http.post(this.baseURL + this.endpoints.LogIn, JSON.stringify(req), this.httpOptions);
     }
     public GetAllBoards() {
         var boards = [
