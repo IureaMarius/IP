@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class ForumManagerService {
 
-    constructor(private apiManager: ApiManagerService) { 
+    constructor(private apiManager: ApiManagerService) {
         this.boards = this.apiManager.GetAllBoards();
         this.Boards.next(this.boards);
     }
@@ -30,7 +30,7 @@ export class ForumManagerService {
 
     private currentBoard;
     public CurrentBoard: BehaviorSubject<object> = new BehaviorSubject<object>(null);
-    
+
     private boards;
     public Boards: BehaviorSubject<object> = new BehaviorSubject<object>(null);
 

@@ -5,8 +5,10 @@ import { LoginPageComponent } from '../login-page/login-page.component';
 import { ForgotPasswordComponent } from '../forgot-password/forgot-password.component';
 import { LearningPageComponent } from '../learning-page/learning-page.component';
 import { SubjectPageComponent } from '../subject-page/subject-page.component';
+import { ForumBoardsComponent } from '../forum-boards/forum-boards.component';
 
 const routes: Routes = [
+    { path: 'forum', component: ForumBoardsComponent },
     { path: 'forgot-password', component: ForgotPasswordComponent },
     { path: 'subjects', component: LearningPageComponent },
     { path: 'subject', component: SubjectPageComponent },

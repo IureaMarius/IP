@@ -1,5 +1,7 @@
 <app-header></app-header>
 <div class="forumContainer">
-    <h3>Boards list:</h3>
-    <app-forum-boards-item *ngFor="let board of boards" [boardData]="board"></app-forum-boards-item>
+  <br>
+    <h3 style="text-align: center; text-shadow: 2px 12px 13px rgba(0,0,0,0.35); font-size: 30px">Boards</h3>
+  <br>
+    <app-forum-boards-item *ngFor="let board of boards"  [boardData]="board" ></app-forum-boards-item>
 </div>

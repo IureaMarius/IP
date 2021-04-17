@@ -1,0 +1,22 @@
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 12px;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.grid-item button{
+  min-width: 200px;
+  width: 500px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.0);
+  border: none;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.grid-item button:hover{
+  color: #3388cb;
+}
