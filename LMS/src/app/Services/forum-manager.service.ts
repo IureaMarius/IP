@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { ApiManagerService } from './api-manager.service';
 import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ForumManagerService {
 
-    constructor(private apiManager: ApiManagerService) {
+    constructor(private apiManager: ApiManagerService,
+                private router: Router) {
         this.boards = this.apiManager.GetAllBoards();
         this.Boards.next(this.boards);
     }
@@ -17,7 +19,7 @@ export class ForumManagerService {
         this.posts = this.apiManager.GetPosts(id);
         this.Posts.next(this.posts);
         // Define the route to the forum-board-posts component
-        //this.router.navigate([]);
+        this.router.navigate([`forum/board/${id}`]);
     }
     public selectedPostID;
     public openComments(id) {

@@ -1,1 +1,7 @@
-<p>forum-board-posts works!</p>
+<app-header></app-header>
+<div class="forumContainer">
+  <br>
+  <h3 style="text-align: center; text-shadow: 2px 12px 13px rgba(0,0,0,0.35); font-size: 30px">Posts</h3>
+  <br>
+  <app-forum-board-posts-item *ngFor="let post of posts"  [postData]="post" ></app-forum-board-posts-item>
+</div>

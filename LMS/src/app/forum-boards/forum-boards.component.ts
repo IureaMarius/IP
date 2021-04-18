@@ -15,5 +15,4 @@ export class ForumBoardsComponent implements OnInit {
             this.boards = data;
         });
     }
-
 }
