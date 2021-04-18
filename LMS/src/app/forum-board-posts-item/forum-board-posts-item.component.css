@@ -1,0 +1,57 @@
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 12px;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 6px;
+}
+.grid-item button{
+  min-width: 1000px;
+  width: 1000px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.0);
+  border: none;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.grid-item button:hover{
+  color: #3388cb;
+}
+
+.details{
+overflow: hidden;
+}
+
+.details .pr{
+  float: right;
+  text-align: right;
+  padding-right: 40px;
+
+}
+.details .pl{
+  float: left;
+}
+
+p span {
+  display: block;
+}
+
+.details img{
+  margin-left: -10px;
+  margin-bottom: 4px;
+  width: 45px;
+}
+
+.maimic{
+  font-size: 16px;
+}
+
+.userspan{
+}
+
+.userspan:hover{
+  color: #3388cb;
+}
