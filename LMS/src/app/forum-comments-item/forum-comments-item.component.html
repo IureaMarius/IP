@@ -1,1 +1,8 @@
-<p>{{commentData}}</p>
+
+<div class="commentContainer">
+    <h6>{{commentData.Author}}</h6>
+    <div class="commentText" [innerHTML]="commentData.Text">
+
+    </div>
+    <app-forum-comments-item *ngFor="let reply of commentData.Replies" [commentData]="reply"></app-forum-comments-item>
+</div>

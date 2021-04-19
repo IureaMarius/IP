@@ -1,5 +1,16 @@
 <app-header></app-header>
 <div class="forumContainer">
-    <h3>aaa list:</h3>
+    <div>
+        <h3>{{post.Title}}</h3>
+        <span class="postAuthor">posted by {{post.Author.Name}}</span>
+        <div class="postText">
+            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
+            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
+            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
+            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
+            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
+        </div>
+    </div>
+    <h3>{{post.CommentCount}} Comments:</h3>
     <app-forum-comments-item *ngFor="let comment of comments" [commentData]="comment"></app-forum-comments-item>
 </div>

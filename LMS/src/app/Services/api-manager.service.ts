@@ -74,15 +74,29 @@ export class ApiManagerService {
             },
             { Text: 'between 5 and 8 minutes, depending on how runny the yolk should be', Author: 'AmazingCook999', Karma: '9' },
             { Text: 'How do you feel about failing this class 23 times in the last 23 years?', Author: 'Ciobi', Karma: '23' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
-            { Text: '', Author: '', Karma: '' },
+            { Text: 'You should really stop talking about this kind of stuff here, it\'s kind of pointles', Author: 'Ion', Karma: '2' },
+            { Text: 'You should google it', Author: 'xXxTestxXx', Karma: '99' },
+            { Text: 'This package you are using has been deprecated, you should avoid using it from now on. If you have to use it on a project, look into the source code since you\'ll probably also have to maintain it', Author: 'OackSverflow', Karma: '12' },
+            { Text: 'Stop asking for people to do your homework here, it\'s not gonna happen', Author: 'pedanticDude', Karma: '0' },
+            { Text: 'lmao', Author: 'valuable poster', Karma: '33' },
+            { Text: `
+⠄⠄⠄⣠⢴⢴⡴⣤⢤⣄⠄⠄⢀⠄⣀⡤⣴⣺⡽⣯⡷⣦⣄⠄⠄⠄ <br>
+⠄⣔⢞⢝⢝⠽⡽⣽⣳⢿⡽⣏⣗⢗⢯⢯⣗⡯⡿⣽⢽⣷⣟⣷⣄ ⠄<br>
+⠄⡗⡟⡼⣸⣁⢋⠎⠎⢯⢯⡧⡫⣎⡽⡹⠊⢍⠙⠜⠽⣳⢯⣿⣳ ⠄<br>
+⠄⢕⠕⠁⣁⢬⢬⣌⠆⠅⢯⡻⣜⢷⠁⠌⡼⠲⠺⢮⡆⡉⢹⣺⣽ ⠄<br>
+⠄⠄⡀⢐⠄⠄⠄⠈⠳⠁⡂⢟⣞⡏⠄⡹⠄⠄⠄⠄⠈⣺⡐⣞⣾ ⠄<br>
+⠄⢰⡳⡹⢦⣀⣠⡠⠤⠄⡐⢝⣾⣳⣐⣌⠳⠦⠤⠤⣞⢼⢽⣻⡷ ⠄<br>
+⠄⢸⣚⢆⢄⣈⠨⢊⢐⢌⠞⣞⣞⡗⡟⡾⣝⢦⣳⡳⣯⢿⣻⣽⣟ ⠄<br>
+⠄⠘⡢⡫⢒⠒⣘⠰⣨⢴⣸⣺⣳⢥⢷⣳⣽⣳⢮⢝⢽⡯⣿⣺⡽ ⠄<br>
+⠄⠄⠁⠪⠤⢑⢄⢽⡙⢽⣺⢾⢽⢯⡟⡽⣾⣎⡿⣮⡳⣹⣳⣗⠇ ⠄<br>
+⠄⠄⠄⠁⠄⡸⡡⠑⠤⣠⡑⠙⠍⡩⡴⣽⡗⣗⣟⣷⣫⢳⢕⡏ ⠄⠄<br>
+⠄⠄⠄⠄⢈⡇⡇⡆⡌⡀⡉⠫⡯⢯⡫⡷⣽⣺⣗⣟⡾⡼⡺ ⠄⠄⠄<br>
+⠄⠄⠄⠄⡮⡎⡎⡎⣞⢲⡹⡵⡕⣇⡿⣽⣳⣟⣾⣳⡯⠉ ⠄⠄⠄⠄<br>
+⠄⠄⠄⠄⢯⡣⡣⡣⡣⡣⣗⡽⣽⣳⢯⢷⣳⣻⣺⣗⡇ ⠄⠄⠄⠄⠄<br>
+⠄⠄⠄⠄⠰⡙⠺⢪⢪⡺⡵⣯⣗⡯⡿⣽⢽⢾⣳⠏ ⠄⠄⠄⠄⠄⠄<br>
+⠄⠄⠄⠄⠄⠐⠢⠄⣀⣀⢉⠊⣊⣉⡬⡶⡻⣝⡞ ⠄⠄⠄⠄⠄⠄⠄<br>
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⠙⢙⢑⢹⣘⠮⠛⠈ ⠄⠄⠄⠄⠄⠄⠄⠄<br>
+⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠂⠁⠑⠁⠄⠄ monke`, Author: 'BananaHoarder', Karma: '10' }
         ];
         return comments;
     }

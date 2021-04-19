@@ -9,9 +9,16 @@ export class ForumCommentsComponent implements OnInit {
 
     constructor(private forumManager: ForumManagerService) { }
     public comments;
+    public post;
     ngOnInit(): void {
         this.forumManager.Comments.subscribe(data => {
             this.comments = data;
+            console.log(this.comments);
+        });
+        this.forumManager.CurrentPost.subscribe(data => {
+            this.post = data;
+            console.log(this.post);
+
         });
     }
 

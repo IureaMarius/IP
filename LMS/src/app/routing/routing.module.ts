@@ -7,8 +7,9 @@ import { LearningPageComponent } from '../learning-page/learning-page.component'
 import { SubjectPageComponent } from '../subject-page/subject-page.component';
 import { ForumBoardsComponent } from '../forum-boards/forum-boards.component';
 import { ForumBoardPostsComponent } from '../forum-board-posts/forum-board-posts.component';
-
+import { ForumCommentsComponent } from '../forum-comments/forum-comments.component';
 const routes: Routes = [
+    { path: 'forum/board/:id/:postId', component: ForumCommentsComponent },
     { path: 'forum/board/:id', component: ForumBoardPostsComponent },
     { path: 'forum', component: ForumBoardsComponent },
     { path: 'forgot-password', component: ForgotPasswordComponent },
@@ -20,11 +21,11 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-      RouterModule.forRoot(routes),
-      CommonModule
-  ],
-  exports: [RouterModule]
+    declarations: [],
+    imports: [
+        RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'}),
+        CommonModule
+    ],
+    exports: [RouterModule]
 })
 export class RoutingModule { }
