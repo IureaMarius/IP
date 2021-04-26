@@ -1,7 +1,42 @@
 <app-header></app-header>
 <div class="forumContainer">
-  <br>
-  <h3 style="text-align: center; text-shadow: 2px 12px 13px rgba(0,0,0,0.35); font-size: 30px">Posts</h3>
-  <br>
+
+    <div class="row titleRow">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    New Post
+</button>
+
+  <h3 class="titleText">Posts</h3>
+    </div>
+
   <app-forum-board-posts-item *ngFor="let post of posts"  [postData]="post" ></app-forum-board-posts-item>
+</div>
+
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create Post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modalForm" [formGroup]="submitPostForm">
+          <div class="modal-body">
+
+              <input type="text" class="form-control titleInput" placeholder="Title" formControlName="Title" />
+              <textarea class="form-control" placeholder="Content" formControlName="Content" >
+              </textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" (click)="submitForm()" class="btn btn-primary" [disabled]="!submitPostForm.valid">Submit</button>
+          </div>
+      </form>
+    </div>
+  </div>
 </div>

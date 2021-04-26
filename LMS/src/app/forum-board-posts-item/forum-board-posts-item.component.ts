@@ -10,6 +10,7 @@ export class ForumBoardPostsItemComponent implements OnInit {
     constructor(private forumManager: ForumManagerService) { }
     @Input() postData;
     ngOnInit(): void {
+        console.log(this.postData);
     }
 
     public openComments() {

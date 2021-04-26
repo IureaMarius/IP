@@ -1,6 +1,6 @@
 
 <div class="commentContainer">
-    <h6>{{commentData.Author}}</h6>
+    <h6 [routerLink]="['/forum/user/', commentData.Author.ID]">{{commentData.Author}}</h6>
     <div class="commentText" [innerHTML]="commentData.Text">
 
     </div>

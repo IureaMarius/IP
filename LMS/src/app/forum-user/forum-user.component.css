@@ -1,0 +1,19 @@
+.profileImage {
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.submissionRow{
+    width: 100%;
+}
+.centered {
+    justify-content: center;
+}
+
+.contentCount {
+    font-size: 20px;
+}
+
+.userInfoContainer {
+    margin-left: 4em;
+    margin-right: 4em;
+}

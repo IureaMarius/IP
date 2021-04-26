@@ -16,10 +16,10 @@ import { AppConfigService } from './Services/app-config.service';
 import { ForumBoardsComponent } from './forum-boards/forum-boards.component';
 import { ForumBoardsItemComponent } from './forum-boards-item/forum-boards-item.component';
 import { ForumBoardPostsComponent } from './forum-board-posts/forum-board-posts.component';
-import { ForumUserPageComponent } from './forum-user-page/forum-user-page.component';
 import { ForumCommentsComponent } from './forum-comments/forum-comments.component';
 import { ForumCommentsItemComponent } from './forum-comments-item/forum-comments-item.component';
 import { ForumBoardPostsItemComponent } from './forum-board-posts-item/forum-board-posts-item.component';
+import { ForumUserComponent } from './forum-user/forum-user.component';
 
 export function appInit(appConfig: AppConfigService) {
     return () => appConfig.load();
@@ -35,10 +35,10 @@ export function appInit(appConfig: AppConfigService) {
         ForumBoardsComponent,
         ForumBoardsItemComponent,
         ForumBoardPostsComponent,
-        ForumUserPageComponent,
         ForumCommentsComponent,
         ForumCommentsItemComponent,
-        ForumBoardPostsItemComponent
+        ForumBoardPostsItemComponent,
+        ForumUserComponent
     ],
     imports: [
         BrowserModule,

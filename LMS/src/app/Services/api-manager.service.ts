@@ -107,14 +107,14 @@ export class ApiManagerService {
             CommentCount: 1235,
             ProfilePicture: 'https://avatars.githubusercontent.com/u/99944?s=400&v=4',
             RecentSubmissions: [
-                { Type: 'Post', Title: 'How did everyone in this class fail, again?', Karma: -999},
-                { Type: 'Comment', Text: 'Well maybe if you came to the courses you would understand', Karma: -9999},
-                { Type: 'Comment', Text: 'no >.<', Karma: -9999},
-                { Type: 'Comment', Text: 'I feel like this question shouln\'t even be asked if you got to this point in the course', Karma: -9999},
-                { Type: 'Comment', Text: 'Stop upvoting this post or I\'ll have to fail you again', Karma: -9999},
-                { Type: 'Post', Title: 'I deleted everybody\'s grades accidentally', Karma: 10000},
-                { Type: 'Post', Title: 'google.com how to restore dropped table SSMS database', Karma: 99},
-                { Type: 'Post', Title: 'SQL drop table help', Karma: 99},
+                { Type: 'post', Title: 'Feeling lost in this course, I found this indian on youtube that can help you!', ID: 82, Author: { Name: 'Ciobi', ID: 8}, LastUpdate: '2021-04-16T17:03:18.079Z', CommentCount: 12, Karma: 999 },
+                { Type: 'post', Title: 'What classroom is this course in for group E8?', ID: 8293, Author: { Name: 'Ciobi', ID: 9999999998}, LastUpdate: '2021-04-16T17:03:18.079Z', CommentCount: 1, Karma: 99 },
+                {  Type: 'post', Title: 'At what hour will the exam start?', ID: 82, Author: { Name: 'Ciobi', ID: 8889}, LastUpdate: '2021-04-16T17:03:18.079Z', CommentCount: 18, Karma: 999 },
+                {  Type: 'post', Title: 'De ce dracu e tot forumu asta in engleza?', ID: 82, Author: { Name: 'Ciobi', ID: 1213122}, LastUpdate: '2021-04-16T17:03:18.079Z', CommentCount: 0, Karma: 999 },
+                { Type: 'comment', Text: 'How do you feel about failing this class 23 times in the last 23 years?', Author: 'Ciobi', Karma: '23' },
+                { Type: 'comment', Text: 'You should really stop talking about this kind of stuff here, it\'s kind of pointles', Author: 'Ciobi', Karma: '2' },
+                { Type: 'comment', Text: 'You should google it', Author: 'xXxTestxXx', Karma: '99' },
+                { Type: 'comment', Text: 'This package you are using has been deprecated, you should avoid using it from now on. If you have to use it on a project, look into the source code since you\'ll probably also have to maintain it', Author: 'Ciobi', Karma: '12' }
             ],
             PersonalDescription: 'None of your business.'
         };

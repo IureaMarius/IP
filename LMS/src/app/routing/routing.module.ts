@@ -8,7 +8,9 @@ import { SubjectPageComponent } from '../subject-page/subject-page.component';
 import { ForumBoardsComponent } from '../forum-boards/forum-boards.component';
 import { ForumBoardPostsComponent } from '../forum-board-posts/forum-board-posts.component';
 import { ForumCommentsComponent } from '../forum-comments/forum-comments.component';
+import { ForumUserComponent } from '../forum-user/forum-user.component';
 const routes: Routes = [
+    { path: 'forum/user/:id', component: ForumUserComponent },
     { path: 'forum/board/:id/:postId', component: ForumCommentsComponent },
     { path: 'forum/board/:id', component: ForumBoardPostsComponent },
     { path: 'forum', component: ForumBoardsComponent },

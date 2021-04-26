@@ -36,6 +36,10 @@ export class ForumManagerService {
         this.router.navigate([`forum/board/${this.selectedBoardID}/${id}`]);
     }
 
+    public GetUserInfo(id) {
+        return this.apiManager.GetUserInfo(id);
+    }
+
     private currentBoard;
     public CurrentBoard: BehaviorSubject<object> = new BehaviorSubject<object>(null);
 

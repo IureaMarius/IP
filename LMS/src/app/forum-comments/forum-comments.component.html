@@ -12,5 +12,13 @@
         </div>
     </div>
     <h3>{{post.CommentCount}} Comments:</h3>
+    <div class="commentFormContainer">
+        <form [formGroup]="commentForm">
+            <textarea class="commentFormInput form-control" placeholder="Write a comment" formControlName="Comment"> </textarea>
+        </form>
+        <button type="submit" [disabled]="!commentForm.valid" (click)="submitComment()" class="btn btn-primary">
+            Submit
+        </button>
+    </div>
     <app-forum-comments-item *ngFor="let comment of comments" [commentData]="comment"></app-forum-comments-item>
 </div>

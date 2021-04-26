@@ -1,0 +1,33 @@
+
+<div class="userInfoContainer">
+    <div class="row centered">
+    <img class="profileImage" [src]="userInfo.ProfilePicture" />
+    </div>
+    <h2 class="row centered">
+        {{userInfo.Name}}
+    </h2>
+
+    <div class="row centered contentCount">
+        <span>
+            Posts: {{userInfo.PostsCount}}
+        </span>
+        --
+        <span>
+            Comments: {{userInfo.CommentCount}}
+        </span>
+    </div>
+    <div class="row submissionList centered">
+        <ng-template ngFor let-submission [ngForOf]="userInfo.RecentSubmissions">
+            <div class="row submissionRow centered">
+            <ng-template [ngIf]="submission.Type == 'post'" [ngIfElse]="comment">
+                <app-forum-board-posts-item [postData]="submission"></app-forum-board-posts-item> 
+            </ng-template>
+            <ng-template #comment>
+                <app-forum-comments-item [commentData]="submission"></app-forum-comments-item>
+            </ng-template>
+            </div>
+        </ng-template>
+
+    </div>
+
+</div>
