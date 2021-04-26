@@ -1,11 +1,9 @@
 <div *ngIf="email">
 
   <h2>{{email.subject | uppercase}}</h2>
-  <div><span>id: </span>{{email.id}}</div>
-  <div>
-    <label for="email-from">From: </label>
-    <label for="email-subject">Subject: </label>
-    <label for="hero-to">To: </label>
+  <div class="emailbox">
+    <div class="emailboxinside">  {{email.message}} </div>
   </div>
 
 </div>
+

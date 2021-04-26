@@ -4,7 +4,7 @@
   <li *ngFor="let email of emails"
       [class.selected]="email === selectedEmail"
       (click)="onSelect(email)">
-    <span> {{email.id}}</span>{{email.from}} {{email.to}} {{email.message}}
+    <div><b>From: </b>{{email.from}} <b>To:</b> {{email.to}} <b>Subject:</b> {{email.subject}}</div>
   </li>
 </ul>
 
