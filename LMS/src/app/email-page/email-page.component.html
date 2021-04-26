@@ -1,0 +1,11 @@
+<app-header></app-header>
+<h1>Email</h1>
+<ul class="emails">
+  <li *ngFor="let email of emails"
+      [class.selected]="email === selectedEmail"
+      (click)="onSelect(email)">
+    <span> {{email.id}}</span>{{email.from}} {{email.to}} {{email.message}}
+  </li>
+</ul>
+
+<app-email-page-item [email]="selectedEmail"></app-email-page-item>
