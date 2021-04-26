@@ -20,6 +20,8 @@ import { ForumCommentsComponent } from './forum-comments/forum-comments.componen
 import { ForumCommentsItemComponent } from './forum-comments-item/forum-comments-item.component';
 import { ForumBoardPostsItemComponent } from './forum-board-posts-item/forum-board-posts-item.component';
 import { ForumUserComponent } from './forum-user/forum-user.component';
+import { EmailPageComponent } from './email-page/email-page.component';
+import { EmailPageItemComponent } from './email-page-item/email-page-item.component';
 
 export function appInit(appConfig: AppConfigService) {
     return () => appConfig.load();
@@ -38,14 +40,16 @@ export function appInit(appConfig: AppConfigService) {
         ForumCommentsComponent,
         ForumCommentsItemComponent,
         ForumBoardPostsItemComponent,
-        ForumUserComponent
+        ForumUserComponent,
+        EmailPageComponent,
+        EmailPageItemComponent
     ],
     imports: [
         BrowserModule,
         RoutingModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientModule 
+        HttpClientModule
     ],
     providers: [
         {

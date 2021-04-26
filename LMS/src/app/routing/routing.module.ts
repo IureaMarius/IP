@@ -9,7 +9,11 @@ import { ForumBoardsComponent } from '../forum-boards/forum-boards.component';
 import { ForumBoardPostsComponent } from '../forum-board-posts/forum-board-posts.component';
 import { ForumCommentsComponent } from '../forum-comments/forum-comments.component';
 import { ForumUserComponent } from '../forum-user/forum-user.component';
+import { EmailPageComponent } from '../../../../../../../Documents/GitHub/IP/LMS/src/app/email-page/email-page.component';
+import { EmailPageItemComponent } from '../../../../../../../Documents/GitHub/IP/LMS/src/app/email-page-item/email-page-item.component';
 const routes: Routes = [
+    { path: 'email', component: EmailPageComponent },
+    { path: 'email-item', component: EmailPageItemComponent },
     { path: 'forum/user/:id', component: ForumUserComponent },
     { path: 'forum/board/:id/:postId', component: ForumCommentsComponent },
     { path: 'forum/board/:id', component: ForumBoardPostsComponent },
