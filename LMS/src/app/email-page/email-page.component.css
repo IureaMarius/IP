@@ -47,3 +47,8 @@
 input {
   padding: .5rem;
 }
+
+.email_content{
+  display: none;
+  background: white;
+}

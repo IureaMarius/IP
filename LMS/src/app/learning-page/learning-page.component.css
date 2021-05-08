@@ -8,8 +8,13 @@
     height:10em;
     text-align: center;
     vertical-align: middle;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.34);
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.34);
+    transition: all 0.5s ease;
 }
 .subject-text {
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -7px 4px rgba(20,45,63,0);
+  font-size: 2.5em;
     position: relative;
     color: white;
     top: 50%;
@@ -17,4 +22,11 @@
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 
+}
+
+.subject:hover{
+  -webkit-box-shadow: 5px 13px 15px -18px rgba(0,0,0,0.34);
+  box-shadow: 5px 13px 15px -18px rgba(0,0,0,0.34);
+  background-color: #64a7de;
+  transition: all 0.5s ease;
 }

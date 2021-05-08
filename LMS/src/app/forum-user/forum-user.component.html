@@ -18,9 +18,9 @@
     </div>
     <div class="row submissionList centered">
         <ng-template ngFor let-submission [ngForOf]="userInfo.RecentSubmissions">
-            <div class="row submissionRow centered">
+            <div class="row submissionRow">
             <ng-template [ngIf]="submission.Type == 'post'" [ngIfElse]="comment">
-                <app-forum-board-posts-item [postData]="submission"></app-forum-board-posts-item> 
+                <app-forum-board-posts-item [postData]="submission"></app-forum-board-posts-item>
             </ng-template>
             <ng-template #comment>
                 <app-forum-comments-item [commentData]="submission"></app-forum-comments-item>
