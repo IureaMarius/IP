@@ -22,6 +22,8 @@ import { ForumBoardPostsItemComponent } from './forum-board-posts-item/forum-boa
 import { ForumUserComponent } from './forum-user/forum-user.component';
 import { EmailPageComponent } from './email-page/email-page.component';
 import { EmailPageItemComponent } from './email-page-item/email-page-item.component';
+import { ExamPageComponent } from './exam-page/exam-page.component';
+import { ExamBuilderComponent } from './exam-builder/exam-builder.component';
 
 export function appInit(appConfig: AppConfigService) {
     return () => appConfig.load();
@@ -42,7 +44,9 @@ export function appInit(appConfig: AppConfigService) {
         ForumBoardPostsItemComponent,
         ForumUserComponent,
         EmailPageComponent,
-        EmailPageItemComponent
+        EmailPageItemComponent,
+        ExamPageComponent,
+        ExamBuilderComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="examContainer">
+    <div *ngFor="let exam of examList" class="examListItem row">
+        <div>
+            {{exam.Name}}
+        </div>
+        <div class="rightExamButtons row">
+            <a>
+                Assign
+            </a>
+            <a>
+                Statistics
+            </a>
+            <button routerLink="/exam-build">
+                Edit Test
+            </button>
+
+        </div>
+
+    </div>
+</div>

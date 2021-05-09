@@ -59,8 +59,8 @@ filter: hue-rotate(45deg);;
 
 .dropdown-menu a {
 
-  font-size: 1.5em;
   color: black;
+  width:100%;
 }
 
 .dropdown-menu a:hover {

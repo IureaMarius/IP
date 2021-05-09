@@ -10,10 +10,14 @@ import { ForumBoardPostsComponent } from '../forum-board-posts/forum-board-posts
 import { ForumCommentsComponent } from '../forum-comments/forum-comments.component';
 import { ForumUserComponent } from '../forum-user/forum-user.component';
 import { EmailPageComponent } from '../email-page/email-page.component';
+import { ExamPageComponent } from '../exam-page/exam-page.component';
+import { ExamBuilderComponent } from '../exam-builder/exam-builder.component';
 import { EmailPageItemComponent } from '../email-page-item/email-page-item.component';
 const routes: Routes = [
     { path: 'email', component: EmailPageComponent },
     { path: 'email-item', component: EmailPageItemComponent },
+    { path: 'exam', component: ExamPageComponent },
+    { path: 'exam-build', component: ExamBuilderComponent },
     { path: 'forum/user/:id', component: ForumUserComponent },
     { path: 'forum/board/:id/:postId', component: ForumCommentsComponent },
     { path: 'forum/board/:id', component: ForumBoardPostsComponent },

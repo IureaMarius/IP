@@ -1,0 +1,13 @@
+.examContainer {
+    padding-left: 5em;
+    padding-right: 5em;
+    width: 100%;
+}
+
+.rightExamButtons {
+    margin-left:auto;
+
+}
+.rightExamButtons > * {
+    margin-left: 1em;
+}
