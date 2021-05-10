@@ -7,7 +7,7 @@
         {{userInfo.Name}}
     </h2>
 
-    <div class="row centered contentCount">
+    <div class="row centered contentCount ">
         <span>
             Posts: {{userInfo.PostsCount}}
         </span>
@@ -18,13 +18,14 @@
     </div>
     <div class="row submissionList centered">
         <ng-template ngFor let-submission [ngForOf]="userInfo.RecentSubmissions">
-            <div class="row submissionRow">
+            <div class="row submissionRow centered">
             <ng-template [ngIf]="submission.Type == 'post'" [ngIfElse]="comment">
                 <app-forum-board-posts-item [postData]="submission"></app-forum-board-posts-item>
             </ng-template>
+              <div class="comments">
             <ng-template #comment>
                 <app-forum-comments-item [commentData]="submission"></app-forum-comments-item>
-            </ng-template>
+            </ng-template></div>
             </div>
         </ng-template>
 

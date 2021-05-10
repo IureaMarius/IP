@@ -8,6 +8,9 @@
 .centered {
     justify-content: center;
 }
+.comments{
+  justify-content: left;
+}
 
 .contentCount {
     font-size: 20px;

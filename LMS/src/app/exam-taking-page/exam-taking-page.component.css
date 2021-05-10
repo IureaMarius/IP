@@ -1,0 +1,112 @@
+.answers{
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.answers span{
+  width: 300px;
+}
+
+.answers span:hover{
+  cursor: pointer;
+  background-color: #324f73;
+  color: #e1e7ea;
+}
+
+.match{
+  padding-left: 25px;
+  display: grid;
+  grid-template-columns: 300px 300px;
+}
+
+.leftcolumn{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.leftcolumn span{
+ margin-bottom: 34px;
+}
+
+.rightcolumn{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.rightcolumn span{
+  margin-bottom: 34px;
+}
+
+.multiplechoice{
+  padding: 30px;
+  max-width: 750px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 20em;
+  margin-top: 5em;
+}
+
+
+.trueFalse{
+  padding: 30px;
+  max-width: 750px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 20em;
+  margin-top: 5em;
+
+}
+
+.matchquestion{
+  padding: 30px;
+  max-width: 750px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 20em;
+  margin-top: 5em;
+}
+
+
+.writeanswer{
+  padding: 30px;
+  max-width: 750px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 20em;
+  margin-top: 5em;
+}
+
+.answersfreetext{
+  display: flex;
+  width: 300px;
+}
+
+.answersfreetext button{
+  margin-left: 430px;
+  position: relative;
+  background-color: #3266a4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.actualquestion{
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.answerstf{
+  padding-left: 25px;
+}
+
+.answerstf span{
+  margin-right: 14px;
+}
+
+.answerstf span:hover{
+  cursor: pointer;
+ background-color: #324f73;
+  color: #e1e7ea;
+}

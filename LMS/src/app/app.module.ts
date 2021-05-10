@@ -24,6 +24,7 @@ import { EmailPageComponent } from './email-page/email-page.component';
 import { EmailPageItemComponent } from './email-page-item/email-page-item.component';
 import { ExamPageComponent } from './exam-page/exam-page.component';
 import { ExamBuilderComponent } from './exam-builder/exam-builder.component';
+import { ExamTakingPageComponent } from './exam-taking-page/exam-taking-page.component';
 
 export function appInit(appConfig: AppConfigService) {
     return () => appConfig.load();
@@ -46,7 +47,8 @@ export function appInit(appConfig: AppConfigService) {
         EmailPageComponent,
         EmailPageItemComponent,
         ExamPageComponent,
-        ExamBuilderComponent
+        ExamBuilderComponent,
+        ExamTakingPageComponent
     ],
     imports: [
         BrowserModule,
