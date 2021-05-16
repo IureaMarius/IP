@@ -48,92 +48,99 @@
   transition: all 0.5s ease;
 }
 
-.questionTitle{
-  text-align: left;
+.questionTitle {
   background-color: #bacdd6;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-.questionTitleText{
+.questionTitleText {
+  text-align: left;
   font-size: 30px;
   font-weight: 500;
   padding: 20px;
 }
 
-.score{
+.score {
   text-align: right;
-  margin-left: 75%;
 }
 
-.questionContent{
+.questionTitleType {
+  min-width: 400px;
+  display: inline-block;
+ text-align: left;
+  margin-right: 60%;
+}
+
+.questionContent {
   display: flex;
   flex-direction: column;
   text-align: left;
   padding: 30px 10px 30px;
 }
 
-.questionContentText{
+.questionContentText {
   padding: 10px;
   margin-bottom: 30px;
 }
 
 .editicon {
-  margin-left:10px;
+  margin-left: 10px;
   padding-bottom: 5px;
   width: 20px;
 }
-.edittext{
+
+.edittext {
   color: #131212;
   text-decoration: none;
 }
 
-.edittext:hover{
+.edittext:hover {
   color: #64a7de;
   cursor: pointer;
 }
 
-.deletetext{
+.deletetext {
   margin-left: 70%;
   color: #131212;
   text-decoration: none;
 }
 
-.deletetext:hover{
+.deletetext:hover {
   color: #64a7de;
   cursor: pointer;
 }
 
-.editiconup:hover{
+.editiconup:hover {
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #9797a5;
 }
 
 .dropdown-menu {
 
-  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
   text-align: center;
-  width:100%;
+  width: 100%;
   min-width: 0;
 }
 
 .dropdown-menu a {
   text-align: center;
   color: #000000;
-  width:100%;
+  width: 100%;
 }
 
 .dropdown-menu a:hover {
   background: #e1e7ea;
 }
 
-.dropdown-item{
+.dropdown-item {
   text-align: center;
 }
 
-.form-control{
+.form-control {
   margin-top: 5px;
 }
