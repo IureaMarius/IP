@@ -1,7 +1,8 @@
 
 <div class="commentContainer">
-    <h6 [routerLink]="['/forum/user/', commentData.Author.ID]">{{commentData.Author}}</h6>
-    <div class="commentText" [innerHTML]="commentData.Text">
+    <h6 [routerLink]="['/forum/user/', 2]">AUTHOR</h6>
+    <div class="commentText">
+        {{commentData.content}}
 
     </div>
     <app-forum-comments-item *ngFor="let reply of commentData.Replies" [commentData]="reply"></app-forum-comments-item>

@@ -8,3 +8,6 @@
 .commentContainer .commentContainer {
     background-color: transparent;
 }
+.commentText {
+    word-break: break-all;
+}

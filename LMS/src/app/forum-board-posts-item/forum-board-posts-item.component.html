@@ -1,20 +1,17 @@
 <div class="grid-item">
 <div>
-  <button (click)="openComments()">{{postData.Title}}</button>
+  <button (click)="openComments()">{{postData.title}}</button>
 </div>
 <div class="details">
   <p class="pl">
-  <span class="userspan" [routerLink]="['/forum/user/', postData.Author.ID]">
-  By {{postData.Author.Name}} <img src="../../assets/logo omulet.png">
-  </span>
-  <span class="maimic">
-  Last update: {{postData.LastUpdate}}
+  <span class="userspan" [routerLink]="['/forum/user/', 3]">
+  By Author <img src="../../assets/logo omulet.png">
   </span>
   </p>
 
   <p class="pr">
-    <span>  Comment count: {{postData.CommentCount}} </span>
-    <span> Karma: {{postData.Karma}} </span>
+    <span>  Comment count: {{postData.numberOfComments}} </span>
+    <span> Karma: {{postData.numberOfLikes - postData.numberOfDislikes}} </span>
   </p>
 </div>
 

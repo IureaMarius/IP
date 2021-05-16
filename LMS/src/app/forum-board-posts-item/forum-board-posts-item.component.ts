@@ -14,7 +14,7 @@ export class ForumBoardPostsItemComponent implements OnInit {
     }
 
     public openComments() {
-        this.forumManager.openComments(this.postData.ID);
+        this.forumManager.openComments(this.postData.id);
     }
 
 }

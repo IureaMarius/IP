@@ -1,7 +1,8 @@
 export interface AppConfig {
-    apiUrl: string;
+    apiUrls: object;
     endpoints: {
-        LogIn: string;
-        LogOut: string;
+        AllForums: string;
+        GetTask: string;
+        GetAllTasks: string;
     }
 }

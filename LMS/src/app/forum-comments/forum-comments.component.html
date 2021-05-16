@@ -1,14 +1,10 @@
 <app-header></app-header>
-<div class="forumContainer">
+<div class="forumContainer" *ngIf="post">
     <div>
-        <h3>{{post.Title}}</h3>
-        <span class="postAuthor">posted by {{post.Author.Name}}</span>
+        <h3>{{post.title}}</h3>
+        <span class="postAuthor">posted by AUTHOR NAME</span>
         <div class="postText">
-            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
-            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
-            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
-            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
-            Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text Lorem ipsum some text
+            {{post.content}}
         </div>
     </div>
     <h3>{{post.CommentCount}} Comments:</h3>

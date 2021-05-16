@@ -1,8 +1,15 @@
 {
-    "apiUrl": "https://www.testAPI.com/REST/",
+    "apiUrls": { "forum": "https://lms-gateway.herokuapp.com",
+                 "task": "https://lms-gateway.herokuapp.com"},
     "endpoints": {
-        "LogIn": "Auth/LogIn",
-        "LogOut": "Auth/LogOut"
+        "GetTask": "/task/",
+        "GetAllTasks": "/task/all",
+
+        "AllForums": "/forum/allForums",
+        "AllQuestions": "/forum/allQuestions",
+        "AddQuestion": "/forum/addQuestion",
+        "AllComments": "/forum/question",
+        "AddComment": "/forum/addComment"
     }
 
 }

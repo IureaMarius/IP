@@ -14,7 +14,7 @@ export class ForumBoardsItemComponent implements OnInit {
     }
 
     public openBoard() {
-        this.forumManager.setSelectedBoard(this.boardData.ID);
+        this.forumManager.setSelectedBoard(this.boardData.id);
     }
 
 }
