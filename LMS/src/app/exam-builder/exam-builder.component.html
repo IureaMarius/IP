@@ -1,1 +1,147 @@
-<p>exam-builder works!</p>
+<app-header></app-header>
+<div class="examdetails">
+  <h3 class="examTitle">
+    EXAM NAME: llorem
+  </h3>
+  <h5 class="examSubject">
+    subject: ipsum
+  </h5>
+  <div>starting time: 2021-06-23T10:00:00</div>
+  <div>ending time: 2021-06-23T12:00:00</div>
+  <a class="editiconup">
+    <img src="../../assets/edit.svg" class="righticon">
+  </a>
+</div>
+
+<div class="questionEditor">
+  <button class="editbutton" data-toggle="modal" data-target="#exampleModal">
+   + New Question
+  </button>
+
+  <div>
+  <div class="questionTitle">
+    <span class="questionTitleText">
+      Question 1
+    </span>
+    <span>
+      type: multiple choice
+    </span>
+    <span class="score">
+      3 pct
+    </span>
+  </div>
+  <div class="questionContent">
+    <span class="questionContentText">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+    </span>
+    <span>
+    <a class="edittext" data-toggle="modal" data-target="#exampleModal">
+    <img src="../../assets/edit.svg" class="editicon"> Edit question
+    </a>
+    <a class="edittext">
+    <img src="../../assets/import.svg" class="editicon"> Import question
+    </a>
+     <a class="deletetext">
+    <img src="../../assets/trash.svg" class="editicon"> Remove from exam
+    </a>
+    </span>
+  </div>
+  </div>
+
+  <div>
+    <div class="questionTitle">
+    <span class="questionTitleText">
+      Question 2
+    </span>
+      <span>
+      type: true/false
+    </span>
+      <span class="score">
+      1 pct
+    </span>
+    </div>
+    <div class="questionContent">
+    <span class="questionContentText">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+    </span>
+      <span>
+    <a class="edittext" data-toggle="modal" data-target="#exampleModal">
+    <img src="../../assets/edit.svg" class="editicon"> Edit question
+    </a>
+    <a class="edittext">
+    <img src="../../assets/import.svg" class="editicon"> Import question
+    </a>
+     <a class="deletetext">
+    <img src="../../assets/trash.svg" class="editicon"> Remove from exam
+    </a>
+    </span>
+    </div>
+  </div>
+
+  <div>
+    <div class="questionTitle">
+    <span class="questionTitleText">
+      Question 3
+    </span>
+      <span>
+      type: short answer
+    </span>
+      <span class="score">
+      34 pct
+    </span>
+    </div>
+    <div class="questionContent">
+    <span class="questionContentText">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+    </span>
+      <span>
+    <a class="edittext" data-toggle="modal" data-target="#exampleModal">
+    <img src="../../assets/edit.svg" class="editicon"> Edit question
+    </a>
+    <a class="edittext">
+    <img src="../../assets/import.svg" class="editicon"> Import question
+    </a>
+     <a class="deletetext">
+    <img src="../../assets/trash.svg" class="editicon"> Remove from exam
+    </a>
+    </span>
+    </div>
+  </div>
+
+
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Please input the question data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modalForm" >
+        <div class="modal-body">
+          <button class="btn" id="userMenuButton" data-toggle="dropdown">
+            Choose the question type ▼
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" >Multiple Choice</a>
+            <a class="dropdown-item" >True/False</a>
+            <a class="dropdown-item" >Short answer</a>
+          </div>
+          <input type="text" class="form-control titleInput" placeholder="Content" formControlName="Title" />
+          <input type="text" class="form-control titleInput" placeholder="Correct Answer" formControlName="Title" />
+          <input type="text" class="form-control titleInput" placeholder="Max Points" formControlName="Title" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

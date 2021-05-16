@@ -1,0 +1,139 @@
+.examdetails {
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 30em;
+  background-color: #e1e7ea;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: all 20s ease;
+}
+
+.righticon {
+  margin-left: 27em;
+  width: 20px;
+}
+
+.righticon:hover {
+  opacity: 50%;
+}
+
+.questionEditor {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  background-color: #e1e7ea;
+  text-align: center;
+  border: 2px solid #AAAAAA;
+  border-radius: 11px;
+}
+
+.editbutton {
+  margin: 14px;
+  width: 150px;
+  position: relative;
+  background-color: #3266a4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.editbutton:hover {
+  background-color: #9797a5;
+  transition: all 0.5s ease;
+}
+
+.questionTitle{
+  text-align: left;
+  background-color: #bacdd6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.questionTitleText{
+  font-size: 30px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.score{
+  text-align: right;
+  margin-left: 75%;
+}
+
+.questionContent{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px 10px 30px;
+}
+
+.questionContentText{
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.editicon {
+  margin-left:10px;
+  padding-bottom: 5px;
+  width: 20px;
+}
+.edittext{
+  color: #131212;
+  text-decoration: none;
+}
+
+.edittext:hover{
+  color: #64a7de;
+  cursor: pointer;
+}
+
+.deletetext{
+  margin-left: 70%;
+  color: #131212;
+  text-decoration: none;
+}
+
+.deletetext:hover{
+  color: #64a7de;
+  cursor: pointer;
+}
+
+.editiconup:hover{
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #9797a5;
+}
+
+.dropdown-menu {
+
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  text-align: center;
+  width:100%;
+  min-width: 0;
+}
+
+.dropdown-menu a {
+  text-align: center;
+  color: #000000;
+  width:100%;
+}
+
+.dropdown-menu a:hover {
+  background: #e1e7ea;
+}
+
+.dropdown-item{
+  text-align: center;
+}
+
+.form-control{
+  margin-top: 5px;
+}
