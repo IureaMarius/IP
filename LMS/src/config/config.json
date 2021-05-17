@@ -9,7 +9,10 @@
         "AllQuestions": "/forum/allQuestions",
         "AddQuestion": "/forum/addQuestion",
         "AllComments": "/forum/question",
-        "AddComment": "/forum/addComment"
+        "AddComment": "/forum/addComment",
+        "DeletePost": "/forum/deleteQuestion",
+        "EditPostTitle": "/forum/updateQuestionTitle",
+        "EditPostContent": "/forum/updateQuestionContent"
     }
 
 }

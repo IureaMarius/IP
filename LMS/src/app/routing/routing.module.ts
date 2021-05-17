@@ -14,6 +14,8 @@ import { ExamPageComponent } from '../exam-page/exam-page.component';
 import { ExamBuilderComponent } from '../exam-builder/exam-builder.component';
 import { EmailPageItemComponent } from '../email-page-item/email-page-item.component';
 import { ExamTakingPageComponent } from '../exam-taking-page/exam-taking-page.component';
+import {ExamStatisticsComponent} from '../exam-statistics/exam-statistics.component';
+import {ExamAssignPageComponent} from '../exam-assign-page/exam-assign-page.component';
 const routes: Routes = [
     { path: 'email', component: EmailPageComponent },
     { path: 'email-item', component: EmailPageItemComponent },
@@ -27,7 +29,9 @@ const routes: Routes = [
     { path: 'forgot-password', component: ForgotPasswordComponent },
     { path: 'subjects', component: LearningPageComponent },
     { path: 'subject', component: SubjectPageComponent },
-    { path: '', component: LoginPageComponent }
+    { path: '', component: LoginPageComponent },
+    { path: 'exam-build/stats', component: ExamStatisticsComponent },
+    { path: 'exam-build/assign', component: ExamAssignPageComponent }
 ];
 
 

@@ -12,5 +12,7 @@ export class ForumCommentsItemComponent implements OnInit {
 
     ngOnInit(): void {
     }
+    public deleteComment() {
+    }
 
 }

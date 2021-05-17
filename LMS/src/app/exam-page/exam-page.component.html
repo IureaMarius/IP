@@ -1,25 +1,30 @@
 <app-header></app-header>
 <div class="examContainer">
+  <button class="createbutton">
+   + New Exam
+  </button>
   <div *ngFor="let exam of examList" class="examListItem row">
     <div class="examWords">
      <span class="examTitle"> {{exam.Name}} </span>
       <span class="examLogo"><img src="../../assets/exam-svgrepo-com.svg" class="examLogo"></span>
-      <span class="examDescription">Description: {{exam.Description}}</span>
+      <span class="examDescription">Subject: {{exam.Subject}}</span>
 
     </div>
     <div class="rightExamButtons rowright">
-      <a>
+      <a routerLink="/exam-build/assign">
         <img src="../../assets/iconmonstr-arrow-67.svg" class="righticon">
         Assign
       </a>
-      <a>
+      <a routerLink="/exam-build/stats">
         <img src="../../assets/statistics-svgrepo-com.svg" class="righticon">
         Statistics
       </a>
       <button routerLink="/exam-build" class="editbutton">
         Edit Test
       </button>
-
+      <a class="smol">
+        <img src="../../assets/trash.svg" class="righticon">
+      </a>
     </div>
 
   </div>

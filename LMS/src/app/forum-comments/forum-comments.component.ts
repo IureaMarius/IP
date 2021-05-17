@@ -16,6 +16,7 @@ export class ForumCommentsComponent implements OnInit {
     public post;
     public commentForm;
     private id;
+    public editPostForm;
     ngOnInit(): void {
         this.route.paramMap.subscribe(params => {
             this.id = params.get('postId'); 
@@ -29,15 +30,41 @@ export class ForumCommentsComponent implements OnInit {
             this.post = data;
             console.log(this.post);
 
+            if(this.post) {
+                this.editPostForm = this.fb.group({
+                    Title: [this.post.title, Validators.required],
+                    Content: [this.post.content, Validators.required]
+                });
+            }
         });
         this.commentForm = this.fb.group({
             Comment: ['', Validators.required]
+        });
+
+
+        this.editPostForm = this.fb.group({
+            Title: ['', Validators.required],
+            Content: ['', Validators.required]
+        });
+    }
+    public deletePost() {
+        this.forumManager.DeletePost(this.id).subscribe((data) => {
+            console.log(data);
+            window.history.back();
         });
     }
     public submitComment() {
         //send to API
         this.forumManager.CreateComment(this.commentForm.value.Comment);
         this.commentForm.reset();
+    }
+    public editPost() {
+        var post: any = {};
+        post.id = this.id;
+        post.title = this.editPostForm.value.Title;
+        post.content = this.editPostForm.value.Content;
+
+        this.forumManager.EditPost(post);
     }
 
 }

@@ -32,8 +32,13 @@ export class ForumBoardPostsComponent implements OnInit {
     public submitForm() {
         this.forumManager.CreatePost(this.submitPostForm).subscribe((result) => {
             console.log(result);
+            location.reload();
         });
         this.submitPostForm.reset();
+    }
+    public removePost(id) {
+
+        this.posts = this.posts.filter((x) => x.id != id);
     }
 
 }

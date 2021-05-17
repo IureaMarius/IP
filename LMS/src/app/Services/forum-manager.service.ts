@@ -32,6 +32,9 @@ export class ForumManagerService {
         };
         return this.apiManager.CreatePost(forward);
     }
+    public DeletePost(id) {
+        return this.apiManager.DeletePost(id);
+    }
     public setSelectedBoard(id) {
         this.selectedBoardID = id;
         this.currentBoard = this.boards.find(x => x.id == id);
@@ -61,6 +64,9 @@ export class ForumManagerService {
         this.apiManager.CreateComment({postId: this.currentPost.id, content: commentContent}).subscribe((data) => {
             console.log(data);
         });
+    }
+    public EditPost(post) {
+        this.apiManager.EditPost(post);
     }
 
 

@@ -6,6 +6,7 @@
         <div class="postText">
             {{post.content}}
         </div>
+    <span class="editDelete"><button data-toggle="modal" data-target="#exampleModal"><img src="../../assets/edit.svg"> Edit</button> <button (click)="deletePost()"> <img src="../../assets/trash.svg">Delete</button></span>
     </div>
     <h3>{{post.CommentCount}} Comments:</h3>
     <div class="commentFormContainer">
@@ -17,4 +18,32 @@
         </button>
     </div>
     <app-forum-comments-item *ngFor="let comment of comments" [commentData]="comment"></app-forum-comments-item>
+</div>
+
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modalForm" [formGroup]="editPostForm">
+          <div class="modal-body">
+
+              <input type="text" class="form-control titleInput" placeholder="Title" formControlName="Title" />
+              <textarea class="form-control" placeholder="Content" formControlName="Content" >
+              </textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" (click)="editPost()" class="btn btn-primary" [disabled]="!editPostForm.valid">Edit</button>
+          </div>
+      </form>
+    </div>
+  </div>
 </div>

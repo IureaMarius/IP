@@ -9,10 +9,10 @@ export class ExamPageComponent implements OnInit {
 
     constructor() { }
     public examList = [
-        { Name: 'Math Exam', Description: 'this is the math exam good luck lmao'},
-        { Name: 'Algo Exam', Description: 'what is this'},
-        { Name: 'Exam Exam', Description: 'this the exam exam solve solve'},
-        { Name: 'Math Exam', Description: 'second times the charm'}
+        { Name: 'Exam', Subject: 'Math'},
+        { Name: 'Algo Exam', Subject: 'Algorithm desing'},
+        { Name: 'Exam Exam', Subject: 'Sport'},
+        { Name: 'Math Exam', Subject: 'Math 2'}
     ];
 
     ngOnInit(): void {

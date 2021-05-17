@@ -1,20 +1,24 @@
 .examContainer {
   padding-top: 2em;
-    padding-left: 5em;
-    padding-right: 5em;
-    width: 100%;
+  padding-left: 5em;
+  padding-right: 5em;
+  width: 100%;
 
 }
 
 .rightExamButtons {
-    margin-left:auto;
-
+  margin-left: auto;
 }
+
+.rightExamButtons a{
+  text-decoration: none;
+}
+
 .rightExamButtons > * {
-    margin-left: 1em;
+  margin-left: 1em;
 }
 
-.examTitle{
+.examTitle {
   margin-top: 20px;
   text-align: center;
   min-width: 150px;
@@ -26,10 +30,10 @@
   background-color: rgba(100, 170, 227, 0.6);
 }
 
-.examDescription{
+.examDescription {
+  text-align: left;
   margin-left: 20px;
   margin-top: 24px;
-  text-align: center;
   min-width: 150px;
   font-size: 14px;
   font-family: "Segoe UI";
@@ -48,24 +52,24 @@
   width: 30px;
 }
 
-.row{
+.row {
   margin-right: 20px;
   margin-top: 1.5em;
   background-color: rgba(245, 245, 245, 0.5);
 }
 
-.rowright{
+.rowright {
   margin-right: 20px;
   margin-top: 1.5em;
 }
 
-.righticon{
+.righticon {
   opacity: 35%;
   width: 20px;
   margin-bottom: 5px;
 }
 
-.editbutton{
+.editbutton {
   margin-bottom: 14px;
   position: relative;
   background-color: #3266a4;
@@ -79,8 +83,43 @@
   transition: all 0.5s ease;
 }
 
-.editbutton:hover{
+.editbutton:hover {
   background-color: #9797a5;
   transition: all 0.5s ease;
 }
+
+.createbutton {
+  width: 150px;
+  height: 50px;
+  font-size: 1em;
+  margin-left: -15px;
+  margin-bottom: 14px;
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+  color: #151515;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  opacity: 75%;
+  border-radius: 4px;
+}
+
+.createbutton:hover {
+  opacity: 100%;
+  color: #e1e7ea;
+  background-color: #557db1;
+  transition: all 0.5s ease;
+}
+
+.smol:hover {
+  cursor: pointer;
+  opacity: 75%;
+  text-decoration: none;
+  color: #ff0000;
+}
+
 

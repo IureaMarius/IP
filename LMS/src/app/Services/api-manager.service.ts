@@ -36,7 +36,33 @@ export class ApiManagerService {
         
         return this.http.get(this.baseURLs.forum + this.endpoints.AllQuestions, requestOptions);
     }
+    public DeletePost(id) {
+        var params: any = new HttpParams().append('id', id);
+        
+        var requestOptions: any = {...this.httpOptions};
+        requestOptions.params = params;
+        return this.http.delete(this.baseURLs.forum + this.endpoints.DeletePost, requestOptions);
+    }
+    public EditPost(post) {
+        var params: any = new HttpParams().append('idQuestion', post.id).append('title', post.title);
+        
+        var requestOptions: any = {...this.httpOptions};
+        requestOptions.params = params;
+        this.http.put(this.baseURLs.forum + this.endpoints.EditPostTitle, null, requestOptions).subscribe((data) => {
+            console.log(data);
+            var contentParams: any = new HttpParams().append('idQuestion', post.id).append('content', post.content);
+            
+            var requestOptions: any = {...this.httpOptions};
+            requestOptions.params = contentParams;
+            this.http.put(this.baseURLs.forum + this.endpoints.EditPostContent, null, requestOptions).subscribe((data) => {
+                console.log(data);
+            });
+
+        });
+    }
+
     GetUserInfo(userId) {
+        console.log(userId);
         var User = {
             Name: 'Ciobi',
             PostsCount: 99,
