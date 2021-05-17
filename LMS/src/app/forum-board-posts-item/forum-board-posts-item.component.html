@@ -1,6 +1,6 @@
 <div class="grid-item">
 <div>
-  <button (click)="openComments()">{{postData.Title}}</button>
+  <button class="commentButton" (click)="openComments()">{{postData.Title}}</button>
 </div>
 <div class="details">
   <p class="pl">
@@ -10,9 +10,11 @@
   <span class="maimic">
   Last update: {{postData.LastUpdate}}
   </span>
+    <span class="editDelete"><button><img src="../../assets/edit.svg"> Edit</button> <button> <img src="../../assets/trash.svg">Delete</button></span>
   </p>
 
   <p class="pr">
+    <span class="buttons"> <button class="votebutton">▲</button>/<button class="votebutton">▼</button></span>
     <span>  Comment count: {{postData.CommentCount}} </span>
     <span> Karma: {{postData.Karma}} </span>
   </p>
