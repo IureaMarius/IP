@@ -5,6 +5,9 @@
         <div *ngFor="let material of materials; let i = index" class="material-list-item" (click)="SelectMaterial(i)" [class]="i == selectedMaterialIndex ? 'material-list-item-selected' : ''">
             {{material.name}} -- {{material.pageTitle}}
         </div>
+        <div routerLink="/subject/add" class="add-course">
+          <button > + Add a new course</button>
+        </div>
     </div>
     <div class="col-9 course-viewer">
         <ng-template [ngIf]="selectedMaterial">
@@ -15,7 +18,7 @@
                     <div *ngSwitchCase="'header'">
                         <h3>{{content.content}}</h3>
                     </div>
-                    <div *ngSwitchCase="'image'"> 
+                    <div *ngSwitchCase="'image'">
                         <img [src]="content.content" class="content-image" />
                     </div>
                     <div *ngSwitchCase="'text'">
