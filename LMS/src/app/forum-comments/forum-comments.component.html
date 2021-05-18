@@ -4,9 +4,10 @@
         <h3>{{post.title}}</h3>
         <span class="postAuthor">posted by AUTHOR NAME</span>
         <div class="postText">
-            {{post.content}}
+          <span>{{post.content}}</span>
+          <span class="editDelete"><button data-toggle="modal" data-target="#exampleModal"><img src="../../assets/edit.svg"> Edit</button> <button (click)="deletePost()"> <img src="../../assets/trash.svg">Delete</button></span>
         </div>
-    <span class="editDelete"><button data-toggle="modal" data-target="#exampleModal"><img src="../../assets/edit.svg"> Edit</button> <button (click)="deletePost()"> <img src="../../assets/trash.svg">Delete</button></span>
+
     </div>
     <h3>{{post.CommentCount}} Comments:</h3>
     <div class="commentFormContainer">

@@ -55,6 +55,7 @@ p span {
 
 
 .userspan:hover{
+  cursor: pointer;
   color: #3388cb;
 }
 
