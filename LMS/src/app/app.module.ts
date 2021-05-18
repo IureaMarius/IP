@@ -28,6 +28,7 @@ import { ExamTakingPageComponent } from './exam-taking-page/exam-taking-page.com
 import { ExamBuilderItemComponent } from './exam-builder-item/exam-builder-item.component';
 import { ExamStatisticsComponent } from './exam-statistics/exam-statistics.component';
 import { ExamAssignPageComponent } from './exam-assign-page/exam-assign-page.component';
+import { StudentExamSelectorComponent } from './student-exam-selector/student-exam-selector.component';
 
 export function appInit(appConfig: AppConfigService) {
     return () => appConfig.load();
@@ -54,7 +55,8 @@ export function appInit(appConfig: AppConfigService) {
         ExamTakingPageComponent,
         ExamBuilderItemComponent,
         ExamStatisticsComponent,
-        ExamAssignPageComponent
+        ExamAssignPageComponent,
+        StudentExamSelectorComponent
     ],
     imports: [
         BrowserModule,

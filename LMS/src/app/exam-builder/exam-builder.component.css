@@ -123,14 +123,13 @@
 
   text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
   text-align: center;
-  width: 100%;
-  min-width: 0;
+  width: 94%;
 }
 
 .dropdown-menu a {
   text-align: center;
   color: #000000;
-  width: 100%;
+  width: 94%;
 }
 
 .dropdown-menu a:hover {

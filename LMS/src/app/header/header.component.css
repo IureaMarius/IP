@@ -25,12 +25,16 @@
 }
 
 .headerItem:hover {
+  cursor: pointer;
 background: #e1e7ea;
   color: #131212;
 }
+.a{
+  width: inherit;
+}
 
 .headerImage {
-    height:100%;
+    height:100px;
     padding: 0.5rem;
     vertical-align: middle;
     text-align: center;

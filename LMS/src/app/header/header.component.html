@@ -1,16 +1,23 @@
 <div class="row header">
- <img src="../../assets/logo-fii.png" routerLink="/subjects" class="headerImage">
-  <div routerLink="/courses" class="headerItem"><span class="headerText">Courses</span></div>
-  <div routerLink="/exams" routerLink="/exam-taking-page" class="headerItem"><span class="headerText">Exams</span></div>
+<!--  facut cu href marius daca e vreo solutie mai buna plz tell-->
+  <a href="https://www.info.uaic.ro">
+ <img src="../../assets/logo-fii.png" class="headerImage">
+  </a>
+
+<!--  de reparat hreful mai sus-->
+  <div routerLink="/courses" routerLink="/subjects" class="headerItem"><span class="headerText">Courses</span></div>
+  <div routerLink="/exams" routerLink="/examSelect" class="headerItem"><span class="headerText">Exams</span></div>
+  <div routerLink="/exams" routerLink="/forum"class="headerItem"><span class="headerText">Forum</span></div>
+  <div routerLink="/exams" routerLink="/email" class="headerItem"><span class="headerText">Email</span></div>
+  <div routerLink="/exams" routerLink="/exam" class="headerItem"><span class="headerText">Editor</span></div>
+
   <div class="dropdown right-float">
     <button class="btn" id="userMenuButton" data-toggle="dropdown">
       <img src="../../assets/logo omulet.png" class="headerImage" />
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a class="dropdown-item" routerLink="/">Log Out</a>
-      <a class="dropdown-item" routerLink="/forum">Forum</a>
-      <a class="dropdown-item" routerLink="/email">Email</a>
-      <a class="dropdown-item" routerLink="/exam">Editor</a>
+      <a class="dropdown-item" [routerLink]="['/forum/user/', 3]">Profile</a>
     </div>
   </div>
 </div>
