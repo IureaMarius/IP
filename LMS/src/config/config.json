@@ -4,6 +4,8 @@
     "endpoints": {
         "GetTask": "/task/",
         "GetAllTasks": "/task/all",
+        "CreateTask": "/task/",
+        "DeleteTask": "/task/",
 
         "AllForums": "/forum/allForums",
         "AllQuestions": "/forum/allQuestions",
@@ -12,7 +14,10 @@
         "AddComment": "/forum/addComment",
         "DeletePost": "/forum/deleteQuestion",
         "EditPostTitle": "/forum/updateQuestionTitle",
-        "EditPostContent": "/forum/updateQuestionContent"
+        "EditPostContent": "/forum/updateQuestionContent",
+        "DeleteComment": "/forum/deleteComment",
+        "UpdateCommentContent": "/forum/updateCommentContent"
+
     }
 
 }

@@ -61,7 +61,7 @@ export class ApiManagerService {
         });
     }
 
-    GetUserInfo(userId) {
+    public GetUserInfo(userId) {
         console.log(userId);
         var User = {
             Name: 'Ciobi',
@@ -91,18 +91,43 @@ export class ApiManagerService {
         
         return this.http.post(this.baseURLs.forum + this.endpoints.AddQuestion, null, requestOptions);
     }
-    GetComments(postId) {
+    public GetComments(postId) {
         var params: any = new HttpParams().append('id', postId);
         var requestOptions: any = {...this.httpOptions};
         requestOptions.params = params;
         
         return this.http.get(this.baseURLs.forum + this.endpoints.AllComments, requestOptions);
     }
-    CreateComment(comment) {
+    public CreateComment(comment) {
         var params: any = new HttpParams().append('idQuestion', comment.postId).append('content', comment.content);
         var requestOptions: any = {...this.httpOptions};
         requestOptions.params = params;
         
         return this.http.post(this.baseURLs.forum + this.endpoints.AddComment, null, requestOptions);
     }
+    public DeleteComment(commentId) {
+        var params: any = new HttpParams().append('idComment', commentId);
+        var requestOptions: any = {...this.httpOptions};
+        requestOptions.params = params;
+        
+        return this.http.delete(this.baseURLs.forum + this.endpoints.DeleteComment, requestOptions);
+    }
+    public EditComment(comment) {
+        var params: any = new HttpParams().append('idComment', comment.id).append('content', comment.content);
+        
+        var requestOptions: any = {...this.httpOptions};
+        requestOptions.params = params;
+        this.http.put(this.baseURLs.forum + this.endpoints.UpdateCommentContent, null, requestOptions).subscribe((data) => {
+            console.log(data);
+        });
+    }
+
+
+    public CreateTask(task) {
+        return this.http.post(this.baseURLs.task + this.endpoints.CreateTask, JSON.stringify(task), this.httpOptions);
+    }
+    public DeleteTask(id) {
+        return this.http.delete(this.baseURLs.task + this.endpoints.DeleteTask + id, this.httpOptions);
+    }
+
 }

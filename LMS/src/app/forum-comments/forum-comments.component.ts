@@ -47,6 +47,9 @@ export class ForumCommentsComponent implements OnInit {
             Content: ['', Validators.required]
         });
     }
+    public removeComment(id) {
+        this.comments = this.comments.filter((x) => x.id != id);
+    }
     public deletePost() {
         this.forumManager.DeletePost(this.id).subscribe((data) => {
             console.log(data);

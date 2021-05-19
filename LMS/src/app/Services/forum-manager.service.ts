@@ -68,6 +68,13 @@ export class ForumManagerService {
     public EditPost(post) {
         this.apiManager.EditPost(post);
     }
+    public DeleteComment(commentId) {
+        return this.apiManager.DeleteComment(commentId);
+    }
+    public EditComment(comment) {
+        this.apiManager.EditComment(comment);
+    }
+
 
 
     private currentBoard;

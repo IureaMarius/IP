@@ -18,7 +18,7 @@
             Submit
         </button>
     </div>
-    <app-forum-comments-item *ngFor="let comment of comments" [commentData]="comment"></app-forum-comments-item>
+    <app-forum-comments-item *ngFor="let comment of comments" (deletedComment)="removeComment($event)" [commentData]="comment"></app-forum-comments-item>
 </div>
 
 

@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ForumManagerService } from '../Services/forum-manager.service';
+
 
 @Component({
     selector: 'app-forum-comments-item',
@@ -8,11 +10,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ForumCommentsItemComponent implements OnInit {
 
     @Input() commentData;
-    constructor() { }
+    @Output() deletedComment: EventEmitter<number> = new EventEmitter<number>();
+    constructor(private forumManager: ForumManagerService) { }
 
     ngOnInit(): void {
     }
     public deleteComment() {
+        this.forumManager.DeleteComment(this.commentData.id).subscribe((data) => {
+            console.log(data);
+            this.deletedComment.emit(this.commentData.id);
+        });
+    }
+    public editComment() {
     }
 
 }

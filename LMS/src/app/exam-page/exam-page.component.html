@@ -5,9 +5,9 @@
   </button>
   <div *ngFor="let exam of examList" class="examListItem row">
     <div class="examWords">
-      <span class="examTitle">{{exam.Name}}</span>
+      <span class="examTitle">{{exam.name}}</span>
       <span class="examLogo"><img src="../../assets/exam-svgrepo-com.svg" class="examLogo"></span>
-      <span class="examDescription">Subject: {{exam.Subject}}</span>
+      <span class="examDescription">Subject: {{exam.subject}}</span>
 
     </div>
     <div class="rightExamButtons rowright">
@@ -22,7 +22,7 @@
       <button routerLink="/exam-build" class="editbutton">
         Edit Test
       </button>
-      <a class="smol">
+      <a class="smol" (click)="deleteTask(exam.id)">
         <img src="../../assets/trash.svg" class="righticon">
       </a>
     </div>
@@ -42,31 +42,25 @@
         </button>
       </div>
       <form class="modalForm" >
-        <div class="modal-body">
-          <button class="btn" id="userMenuButton" data-toggle="dropdown">
-            Choose the exam subject ▼
-          </button>
-<!--          de modificat sa apara toate materiile(apare doar prima )-->
-          <div  *ngFor="let subject of subjects" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item">
-            {{subject.name}}
-            </a>
-          </div>
+        <form class="modal-body" [formGroup]="createTaskForm">
           <!--          de modificat sa apara toate materiile(apare doar prima )-->
 
+          <select formControlName="Subject">
+              <option *ngFor="let subject of subjects" [value]="subject.name">{{subject.name}} </option>
+          </select>
 <!--          sa se reseteze data si timpul cand apas submit-->
-          <input type="text" class="form-control titleInput" placeholder="Name"  />
-          <span class="timetext"> Date: </span>
-          <input type="date" class="form-control titleInput"/>
+          <input type="text" class="form-control titleInput" placeholder="Name" formControlName="Name" />
+          <span class="timetext" > Date: </span>
+          <input type="date" class="form-control titleInput" formControlName="Date" />
           <span class="timetext"> Starting time: </span>
-          <input type="time" class="form-control titleInput" />
+          <input type="time" class="form-control titleInput" formControlName="Start" />
          <span class="timetext"> Ending time: </span>
-          <input type="time" class="form-control titleInput" />
+          <input type="time" class="form-control titleInput" formControlName="End" />
           <!--          sa se reseteze data si timpul cand apas submit-->
-        </div>
+        </form>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" class="btn btn-primary">Submit</button>
+          <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" class="btn btn-primary" (click)="CreateTask()">Submit</button>
         </div>
       </form>
     </div>
