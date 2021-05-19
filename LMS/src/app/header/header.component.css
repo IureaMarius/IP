@@ -120,6 +120,7 @@ filter: hue-rotate(45deg);;
   .smoltext{display: inherit}
   #smol{display: inherit}
   .dropdown-menu{
+    margin-right: auto;
     width: 300px;
     padding: 0;
     background-color:#3388cb ;
@@ -135,6 +136,7 @@ filter: hue-rotate(45deg);;
   .dropdown-menu a:hover{
     color: #000000;
   }
+
 
 }
 
