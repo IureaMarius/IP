@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="h-100 row login-background">
+  <div class="col-11 col-md-6 col-sm-10 col-lg-4 login-body">
+    <div class="row centerAlign">
+      <span>In order to use the email, you will need to:</span>
+      <span>1. Enable two factor authenticator on your personal Google account</span>
+      <span>2. Manually generate a password from your Google account in order to be able to use the mailing service
+                  <ul>
+                    <li>Open the Security tab</li>
+                    <li>Under "Signing in to Google", click on App passwords</li>
+                    <li>In the Select App dropdown, pick Mail</li>
+                    <li>In the Select Device dropdown, pick Windows Computer</li>
+                    <li>Click on Generate and copy the 16-letter password</li>
+                    <li>Enter the password in our configuration page</li>
+                  </ul>
+      </span>
+    </div>
+    <div class="row centerAlign">
+      <img class="user-logo centerAlign" src="../../assets/logo omulet.png" />
+    </div>
+
+    <form (ngSubmit)="formSubmit()" class="row centerAlign form-group" [formGroup]="loginForm">
+      <input type="text" class="form-control" placeholder="Enter your Gmail here" formControlName="userName" />
+      <input type="password" class="form-control" placeholder="Enter the generated 16-letter password" formControlName="password" />
+
+      <button type="submit" class="btn btn-primary centerAlign" [disabled]="!loginForm.valid" >Submit</button>
+    </form>
+  </div>
+</div>

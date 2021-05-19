@@ -31,6 +31,7 @@ import { ExamAssignPageComponent } from './exam-assign-page/exam-assign-page.com
 import { StudentExamSelectorComponent } from './student-exam-selector/student-exam-selector.component';
 import { SubjectAdderComponent } from './subject-adder/subject-adder.component';
 import { EmailWritingPageComponent } from './email-writing-page/email-writing-page.component';
+import { EmailConfigPageComponent } from './email-config-page/email-config-page.component';
 
 export function appInit(appConfig: AppConfigService) {
     return () => appConfig.load();
@@ -60,7 +61,8 @@ export function appInit(appConfig: AppConfigService) {
         ExamAssignPageComponent,
         StudentExamSelectorComponent,
         SubjectAdderComponent,
-        EmailWritingPageComponent
+        EmailWritingPageComponent,
+        EmailConfigPageComponent
     ],
     imports: [
         BrowserModule,
