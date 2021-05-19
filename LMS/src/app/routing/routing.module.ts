@@ -18,6 +18,7 @@ import {ExamStatisticsComponent} from '../exam-statistics/exam-statistics.compon
 import {ExamAssignPageComponent} from '../exam-assign-page/exam-assign-page.component';
 import {StudentExamSelectorComponent} from '../student-exam-selector/student-exam-selector.component';
 import {SubjectAdderComponent} from '../subject-adder/subject-adder.component';
+import {EmailWritingPageComponent} from '../email-writing-page/email-writing-page.component';
 
 const routes: Routes = [
     { path: 'email', component: EmailPageComponent },
@@ -36,7 +37,8 @@ const routes: Routes = [
     { path: '', component: LoginPageComponent },
     { path: 'exam-build/stats', component: ExamStatisticsComponent },
     { path: 'exam-build/assign', component: ExamAssignPageComponent },
-    { path: 'examSelect', component: StudentExamSelectorComponent }
+    { path: 'examSelect', component: StudentExamSelectorComponent },
+    { path: 'emailWrite', component: EmailWritingPageComponent}
 ];
 
 
