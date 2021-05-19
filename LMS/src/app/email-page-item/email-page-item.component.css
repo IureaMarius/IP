@@ -1,7 +1,14 @@
 .emailbox{
+  padding:20px 40px 40px 40px;
 }
 
 .emailboxinside{
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.email-title{
+  background-color: rgba(50, 102, 164,0.8);
+  padding-left: 30px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}

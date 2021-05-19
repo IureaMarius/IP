@@ -17,7 +17,12 @@ import { ExamTakingPageComponent } from '../exam-taking-page/exam-taking-page.co
 import {ExamStatisticsComponent} from '../exam-statistics/exam-statistics.component';
 import {ExamAssignPageComponent} from '../exam-assign-page/exam-assign-page.component';
 import {StudentExamSelectorComponent} from '../student-exam-selector/student-exam-selector.component';
+import {SubjectAdderComponent} from '../subject-adder/subject-adder.component';
+import {EmailWritingPageComponent} from '../email-writing-page/email-writing-page.component';
+import {EmailConfigPageComponent} from '../email-config-page/email-config-page.component';
+
 const routes: Routes = [
+    { path: 'email-config', component: EmailConfigPageComponent},
     { path: 'email', component: EmailPageComponent },
     { path: 'email-item', component: EmailPageItemComponent },
     { path: 'exam', component: ExamPageComponent },
@@ -30,10 +35,12 @@ const routes: Routes = [
     { path: 'forgot-password', component: ForgotPasswordComponent },
     { path: 'subjects', component: LearningPageComponent },
     { path: 'subject', component: SubjectPageComponent },
+    { path: 'subject/add', component: SubjectAdderComponent},
     { path: '', component: LoginPageComponent },
     { path: 'exam-build/stats', component: ExamStatisticsComponent },
     { path: 'exam-build/assign', component: ExamAssignPageComponent },
-    { path: 'examSelect', component: StudentExamSelectorComponent }
+    { path: 'examSelect', component: StudentExamSelectorComponent },
+    { path: 'emailWrite', component: EmailWritingPageComponent}
 ];
 
 

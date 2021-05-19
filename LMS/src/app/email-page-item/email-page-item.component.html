@@ -1,9 +1,8 @@
-<div *ngIf="email">
+<div *ngIf="email" class="all-of-it">
 
-  <h2>{{email.subject | uppercase}}</h2>
+  <h2 class="email-title">{{email.subject | uppercase}}</h2>
   <div class="emailbox">
     <div class="emailboxinside">  {{email.message}} </div>
   </div>
 
 </div>
-

@@ -175,7 +175,6 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  transition: all 20s ease;
   border-radius: 4px;
 }
 
@@ -222,4 +221,19 @@
   color: #131212;
   position:relative;
   top:4px;
+}
+
+@media only screen and (max-width: 1366px) {
+.examdetails{
+  margin-left: 5px;
+}
+  .multiplechoice{
+    margin-left: 5px;
+  }
+  .trueFalse{
+    margin-left: 5px;
+  }
+  .writeanswer{
+    margin-left: 5px;
+  }
 }

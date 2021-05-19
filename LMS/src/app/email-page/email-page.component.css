@@ -49,6 +49,48 @@ input {
 }
 
 .email_content{
-  display: none;
+  padding: 0px;
+  display: block;
   background: white;
+}
+
+
+.emailcontrol{
+  padding:10px;
+  margin-right: 30px;
+  width: 150px;
+  position: relative;
+  background-color: #3266a4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.emailcontrol:hover {
+  background-color: #9797a5;
+  transition: all 0.5s ease;
+}
+
+
+
+.icon{
+  height: 20px;
+}
+
+
+.modal-content{
+  left: -400px;
+  width: 1000px;
+}
+
+@media only screen and (max-width: 1366px) {
+  .modal-content{
+    width: 100%;
+    left: 0px;
+  }
 }
