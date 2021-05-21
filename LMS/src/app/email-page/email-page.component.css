@@ -76,7 +76,15 @@ input {
   transition: all 0.5s ease;
 }
 
+.emails-header{
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
 
+.emails-header button{
+  margin-left: auto;
+}
 
 .icon{
   height: 20px;

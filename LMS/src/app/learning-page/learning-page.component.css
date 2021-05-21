@@ -31,6 +31,74 @@
   transition: all 0.5s ease;
   cursor: pointer;
 }
+
+.everything{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.add-button{
+  border: none;
+  background-color: #3388cb;
+  border-radius: 0.5rem;
+  height:10em;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.34);
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.34);
+  transition: all 0.5s ease;
+  width: 441px;
+  margin-left: 200px;
+  margin-top: 1em;
+}
+
+.add-button:hover{
+  -webkit-box-shadow: 5px 13px 15px -18px rgba(0,0,0,0.34);
+  box-shadow: 5px 13px 15px -18px rgba(0,0,0,0.34);
+  background-color: #64a7de;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.add-text{
+  top: 20%;
+  text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5), 2px -7px 4px rgba(20,45,63,0);
+  font-size: 2.5em;
+  position: relative;
+  color: white;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.dropdown-menu {
+
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
+  text-align: center;
+  width: 43%;
+}
+
+.dropdown-menu a {
+  margin-left: 5px;
+  text-align: center;
+  color: #000000;
+  width: 94%;
+}
+
+.dropdown-menu a:hover {
+  cursor: pointer;
+  background: #e1e7ea;
+}
+
+.dropdown-item {
+  text-align: center;
+}
+
+.form-control {
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 1256px) {
 
   .subjects-list{

@@ -20,6 +20,7 @@ import {StudentExamSelectorComponent} from '../student-exam-selector/student-exa
 import {SubjectAdderComponent} from '../subject-adder/subject-adder.component';
 import {EmailWritingPageComponent} from '../email-writing-page/email-writing-page.component';
 import {EmailConfigPageComponent} from '../email-config-page/email-config-page.component';
+import {ExamResultsComponent} from '../exam-results/exam-results.component';
 
 const routes: Routes = [
     { path: 'email-config', component: EmailConfigPageComponent},
@@ -40,7 +41,8 @@ const routes: Routes = [
     { path: 'exam-build/stats', component: ExamStatisticsComponent },
     { path: 'exam-build/assign', component: ExamAssignPageComponent },
     { path: 'examSelect', component: StudentExamSelectorComponent },
-    { path: 'emailWrite', component: EmailWritingPageComponent}
+    { path: 'emailWrite', component: EmailWritingPageComponent},
+  {path: 'examResults', component: ExamResultsComponent}
 ];
 
 
