@@ -1,5 +1,10 @@
 <app-header></app-header>
+<div class="emails-header">
 <h1>Email</h1>
+<button class="emailcontrol" routerLink='/emailWrite'>
+  + Compose
+</button>
+</div>
 <ul class="emails">
   <li *ngFor="let email of emails"
       [class.selected]="email === selectedEmail"

@@ -17,8 +17,12 @@
   display: flex;
   align-items: center;
 }
-.fii-logo, .user-logo {
+.fii-logo {
   max-width: 50%;
+}
+
+.user-logo{
+  max-width: 30%;
 }
 
 .form-control {
