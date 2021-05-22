@@ -10,7 +10,7 @@
   <div>ending time: 2021-06-23T12:00:00</div>
 <!--  this should trigger another modal, similar to the new exam modal, idk how to make another modal here-->
   <a class="editiconup">
-    <img src="../../assets/edit.svg" class="righticon">
+    <img src="../../assets/edit.svg" class="righticon" data-toggle="modal" data-target="#taskModal">
   </a>
 </div>
 
@@ -161,9 +161,9 @@
             <a class="dropdown-item" >True/False</a>
             <a class="dropdown-item" >Short answer</a>
           </div>
-          <input type="text" class="form-control titleInput" placeholder="Content" formControlName="Title" />
-          <input type="text" class="form-control titleInput" placeholder="Correct Answer" formControlName="Title" />
-          <input type="text" class="form-control titleInput" placeholder="Max Points" formControlName="Title" />
+          <input type="text" class="form-control titleInput" placeholder="Content"  />
+          <input type="text" class="form-control titleInput" placeholder="Correct Answer"  />
+          <input type="text" class="form-control titleInput" placeholder="Max Points"/>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -177,3 +177,38 @@
 
 
 
+<!-- Modal for task editing -->
+<div class="modal fade" id="taskModal" tabindex="-1" role="dialog" aria-labelledby="taskModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="taskModalLabel">Edit Exam</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modalForm" >
+        <form class="modal-body" [formGroup]="editExamForm">
+          <!--          de modificat sa apara toate materiile(apare doar prima )-->
+
+          <select formControlName="Subject">
+              <option *ngFor="let subject of subjects" [value]="subject.name">{{subject.name}} </option>
+          </select>
+<!--          sa se reseteze data si timpul cand apas submit-->
+          <input type="text" class="form-control titleInput" placeholder="Name" formControlName="Name" />
+          <span class="timetext" > Date: </span>
+          <input type="date" class="form-control titleInput" formControlName="Date" />
+          <span class="timetext"> Starting time: </span>
+          <input type="time" class="form-control titleInput" formControlName="Start" />
+         <span class="timetext"> Ending time: </span>
+          <input type="time" class="form-control titleInput" formControlName="End" />
+          <!--          sa se reseteze data si timpul cand apas submit-->
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" class="btn btn-primary" (click)="EditExam()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

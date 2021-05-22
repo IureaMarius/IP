@@ -18,7 +18,7 @@
             Submit
         </button>
     </div>
-    <app-forum-comments-item *ngFor="let comment of comments" (deletedComment)="removeComment($event)" [commentData]="comment"></app-forum-comments-item>
+    <app-forum-comments-item *ngFor="let comment of comments" (deletedComment)="removeComment($event)" (editCommentPressed)="selectComment($event)"[commentData]="comment"></app-forum-comments-item>
 </div>
 
 
@@ -43,6 +43,30 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" (click)="editPost()" class="btn btn-primary" [disabled]="!editPostForm.valid">Edit</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="commentEditModal" tabindex="-1" role="dialog" aria-labelledby="commentEditModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="commentEditModalLabel">Edit Comment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modalForm" [formGroup]="editCommentForm">
+          <div class="modal-body">
+
+              <textarea class="form-control" placeholder="Content" formControlName="Comment" >
+              </textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" (click)="editComment()" class="btn btn-primary" [disabled]="!editPostForm.valid">Edit</button>
           </div>
       </form>
     </div>

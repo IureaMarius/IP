@@ -15,7 +15,9 @@ export class ForumCommentsComponent implements OnInit {
     public comments;
     public post;
     public commentForm;
+    public editCommentForm;
     private id;
+    private selectedCommentId;
     public editPostForm;
     ngOnInit(): void {
         this.route.paramMap.subscribe(params => {
@@ -38,6 +40,9 @@ export class ForumCommentsComponent implements OnInit {
             }
         });
         this.commentForm = this.fb.group({
+            Comment: ['', Validators.required]
+        });
+        this.editCommentForm = this.fb.group({
             Comment: ['', Validators.required]
         });
 
@@ -68,6 +73,15 @@ export class ForumCommentsComponent implements OnInit {
         post.content = this.editPostForm.value.Content;
 
         this.forumManager.EditPost(post);
+    }
+    public editComment() {
+        var comment: any = {};
+        comment.id = this.selectedCommentId;
+        comment.content = this.editCommentForm.value.Comment;
+        this.forumManager.EditComment(comment);
+    }
+    public selectComment(id) {
+        this.selectedCommentId = id;
     }
 
 }

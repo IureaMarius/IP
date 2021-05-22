@@ -29,5 +29,13 @@ export class TaskManagerService {
             this.Tasks.next(this.tasks);
         });
     }
+    public EditTask(task) {
+        this.apiManager.EditTask(task).subscribe(data => {
+            console.log(data);
+        });
+    }
+    public GetAllQuestions(taskId) {
+        return this.apiManager.GetAllQuestions(taskId);
+    }
 
 }

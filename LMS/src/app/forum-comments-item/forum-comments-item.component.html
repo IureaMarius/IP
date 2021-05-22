@@ -5,6 +5,6 @@
         {{commentData.content}}
 
     </div>
-    <span class="editDelete"><button><img src="../../assets/edit.svg"> Edit</button> <button (click)="deleteComment()"> <img src="../../assets/trash.svg">Delete</button></span>
+    <span class="editDelete"><button (click)="editComment()" data-toggle="modal" data-target="#commentEditModal"><img src="../../assets/edit.svg"> Edit</button> <button (click)="deleteComment()"> <img src="../../assets/trash.svg">Delete</button></span>
     <app-forum-comments-item *ngFor="let reply of commentData.Replies" [commentData]="reply"></app-forum-comments-item>
 </div>

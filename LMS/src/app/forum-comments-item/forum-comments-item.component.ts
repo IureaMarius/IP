@@ -11,6 +11,7 @@ export class ForumCommentsItemComponent implements OnInit {
 
     @Input() commentData;
     @Output() deletedComment: EventEmitter<number> = new EventEmitter<number>();
+    @Output() editCommentPressed: EventEmitter<number> = new EventEmitter<number>();
     constructor(private forumManager: ForumManagerService) { }
 
     ngOnInit(): void {
@@ -22,6 +23,7 @@ export class ForumCommentsItemComponent implements OnInit {
         });
     }
     public editComment() {
+        this.editCommentPressed.emit(this.commentData.id);
     }
 
 }

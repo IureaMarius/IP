@@ -27,8 +27,8 @@ export class ForumManagerService {
     public CreatePost(post) {
         var forward = {
             idForum: this.selectedBoardID,
-            Title: post.value.Title,
-            Content: post.value.Content
+            title: post.value.Title,
+            content: post.value.Content
         };
         return this.apiManager.CreatePost(forward);
     }

@@ -19,7 +19,7 @@
         <img src="../../assets/statistics-svgrepo-com.svg" class="righticon">
         Statistics
       </a>
-      <button routerLink="/exam-build" class="editbutton">
+      <button routerLink="/exam-build/{{exam.id}}" class="editbutton">
         Edit Test
       </button>
       <a class="smol" (click)="deleteTask(exam.id)">

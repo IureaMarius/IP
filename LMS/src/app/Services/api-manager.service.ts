@@ -29,12 +29,7 @@ export class ApiManagerService {
         return this.http.get(this.baseURLs.task + this.endpoints.GetAllTasks, this.httpOptions);
     }
     public GetPosts(id) {
-        var params: any = new HttpParams().append('idForum', id);
-        
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
-        
-        return this.http.get(this.baseURLs.forum + this.endpoints.AllQuestions, requestOptions);
+        return this.http.get(this.baseURLs.forum + this.endpoints.AllQuestions + id, this.httpOptions);
     }
     public DeletePost(id) {
         var params: any = new HttpParams().append('id', id);
@@ -85,11 +80,8 @@ export class ApiManagerService {
 
 
     public CreatePost(post) {
-        var params: any = new HttpParams().append('idForum', post.idForum).append('title', post.Title).append('content', post.Content);
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
         
-        return this.http.post(this.baseURLs.forum + this.endpoints.AddQuestion, null, requestOptions);
+        return this.http.post(this.baseURLs.forum + this.endpoints.AddQuestion, JSON.stringify(post), this.httpOptions);
     }
     public GetComments(postId) {
         var params: any = new HttpParams().append('id', postId);
@@ -128,6 +120,12 @@ export class ApiManagerService {
     }
     public DeleteTask(id) {
         return this.http.delete(this.baseURLs.task + this.endpoints.DeleteTask + id, this.httpOptions);
+    }
+    public EditTask(task) {
+        return this.http.put(this.baseURLs.task + this.endpoints.EditTask + task.id, JSON.stringify(task), this.httpOptions); 
+    }
+    public GetAllQuestions(taskId) {
+        return this.http.get(this.baseURLs.task + this.endpoints.GetAllQuestions + taskId, this.httpOptions);
     }
 
 }
