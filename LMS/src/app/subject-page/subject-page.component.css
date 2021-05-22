@@ -12,6 +12,7 @@
     background-color: #3388cb;
 }
 .material-list-item:hover, .material-list-item-selected {
+  cursor: pointer;
     background-color: white;
     color: black;
     transition: 0.25s;
