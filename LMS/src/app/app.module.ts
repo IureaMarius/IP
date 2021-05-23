@@ -33,6 +33,8 @@ import { SubjectAdderComponent } from './subject-adder/subject-adder.component';
 import { EmailWritingPageComponent } from './email-writing-page/email-writing-page.component';
 import { EmailConfigPageComponent } from './email-config-page/email-config-page.component';
 import { ExamResultsComponent } from './exam-results/exam-results.component';
+import { ExamGraderStudentsComponent } from './exam-grader-students/exam-grader-students.component';
+import { ExamGraderQuestionsComponent } from './exam-grader-questions/exam-grader-questions.component';
 
 export function appInit(appConfig: AppConfigService) {
     return () => appConfig.load();
@@ -64,7 +66,9 @@ export function appInit(appConfig: AppConfigService) {
         SubjectAdderComponent,
         EmailWritingPageComponent,
         EmailConfigPageComponent,
-        ExamResultsComponent
+        ExamResultsComponent,
+        ExamGraderStudentsComponent,
+        ExamGraderQuestionsComponent
     ],
     imports: [
         BrowserModule,
