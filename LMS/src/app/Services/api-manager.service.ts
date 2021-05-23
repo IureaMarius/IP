@@ -86,6 +86,12 @@ export class ApiManagerService {
         });
     }
 
+    public GetAllStudents() {
+        return this.http.get(this.baseURLs.task + this.endpoints.GetAllStudents, this.httpOptions);
+    }
+    public AssignTaskToStudent(assignment) {
+        return this.http.post(this.baseURLs.task + this.endpoints.AssignTaskToStudent, JSON.stringify(assignment), this.httpOptions);
+    }
 
     public CreateTask(task) {
         return this.http.post(this.baseURLs.task + this.endpoints.CreateTask, JSON.stringify(task), this.httpOptions);
@@ -115,5 +121,29 @@ export class ApiManagerService {
     public AssignQuestionToTask(questionId, taskId) {
         return this.http.post(this.baseURLs.task + this.endpoints.AssignQuestionToTask, JSON.stringify({questionId: questionId, taskId: taskId}), this.httpOptions);
     }
+
+    public GetAllSubjects() {
+        return this.http.get(this.baseURLs.content + this.endpoints.GetAllSubjects, this.httpOptions);
+    }
+    public GetSubject(id) {
+        return this.http.get(this.baseURLs.content + this.endpoints.GetSubject + id, this.httpOptions); 
+    }
+    public CreateCourse(course) {
+        var sentCourse = {
+            name: course.name,
+            pageTitle: course.title
+        };
+        return this.http.post(this.baseURLs.content + this.endpoints.CreateCourse, JSON.stringify(sentCourse), this.httpOptions);
+    }
+    public AddContent(block) {
+        return this.http.post(this.baseURLs.content + this.endpoints.AddContent, JSON.stringify(block), this.httpOptions);
+    }
+    public SetCourseToSubject(association) {
+        return this.http.post(this.baseURLs.content + this.endpoints.SetCourseToSubject, JSON.stringify(association), this.httpOptions);
+    }
+    public CreateSubject(subject) {
+        return this.http.post(this.baseURLs.content + this.endpoints.CreateSubject, JSON.stringify(subject), this.httpOptions);
+    }
+
 
 }

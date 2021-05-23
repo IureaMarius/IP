@@ -1,11 +1,11 @@
 <app-header></app-header>
-<div class="subject-adder">
+<div class="subject-adder" [formGroup]="newCourseForm">
   <div class="name-box">Enter a course name:
-    <div><input type="text" id="course-name-box" name="course-name-box"></div>
+    <div><input type="text" id="course-name-box" name="course-name-box" formControlName="name"></div>
   </div>
   <div class="title-box">Enter a page title:
-    <div><input type="text" id="page-title-box" name="page-title-box"></div>
+    <div><input type="text" id="page-title-box" name="page-title-box" formControlName="title"></div>
   </div>
-  <textarea placeholder="Enter your course data here." class="text-box" rows="10" cols="80"></textarea>
+  <textarea placeholder="Enter your course data here." class="text-box" rows="10" cols="80" formControlName="content"></textarea>
 </div>
-<button class="submit-button">Submit course</button>
+<button class="submit-button" (click)="AddCourse()">Submit course</button>

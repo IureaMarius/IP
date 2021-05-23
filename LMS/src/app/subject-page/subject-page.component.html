@@ -2,18 +2,18 @@
 <div class="row cover-page">
     <div class="col-3 course-selector">
         <h4 class="material-list-title"> {{Title}} </h4>
-        <div *ngFor="let material of materials; let i = index" class="material-list-item" (click)="SelectMaterial(i)" [class]="i == selectedMaterialIndex ? 'material-list-item-selected' : ''">
-            {{material.name}} -- {{material.pageTitle}}
+        <div *ngFor="let course of courses; let i = index" class="material-list-item" (click)="SelectCourse(i)" [class]="i == selectedMaterialIndex ? 'material-list-item-selected' : ''">
+            {{course.name}} -- {{course.pageTitle}}
         </div>
         <div class="add-course">
-          <button  routerLink="/subject/add"> + Add a new course</button>
+            <button routerLink="/subject/add/{{id}}"> + Add a new course</button>
         </div>
     </div>
     <div class="col-9 course-viewer">
-        <ng-template [ngIf]="selectedMaterial">
-            <h1> {{selectedMaterial.name}} </h1>
-            <h3> {{selectedMaterial.pageTitle}} </h3>
-            <div *ngFor="let content of selectedMaterial.contentBlocks">
+        <ng-template [ngIf]="selectedCourse">
+            <h1> {{selectedCourse.name}} </h1>
+            <h3> {{selectedCourse.pageTitle}} </h3>
+            <div *ngFor="let content of selectedCourse.courseContentBlocks">
                 <div [ngSwitch]="content.type">
                     <div *ngSwitchCase="'header'">
                         <h3>{{content.content}}</h3>

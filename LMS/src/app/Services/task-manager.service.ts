@@ -62,4 +62,15 @@ export class TaskManagerService {
             });
         }
     }
+
+    public GetAllStudents() {
+        return this.apiManager.GetAllStudents();
+    }
+    public AssignTaskToStudents(assignmentList) {
+        for(var assignment of assignmentList) {
+            this.apiManager.AssignTaskToStudent(assignment).subscribe(data => {
+                console.log(data);
+            });
+        }
+    }
 }

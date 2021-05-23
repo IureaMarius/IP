@@ -1,9 +1,9 @@
 <app-header></app-header>
 <div class="everything">
-  <button class="add-button" data-toggle="modal" data-target="#exampleModal" ><h3 class="add-text">+ Add subject</h3></button>
+  <button class="add-button" data-toggle="modal" data-target="#exampleModal"><h3 class="add-text">+ Add subject</h3></button>
 <div class="row subjects-list col-10 centerAlign">
     <div *ngFor="let subject of subjects" class=" col-4" >
-        <div class="subject" (click)="GoToSubjectPage(subject)">
+        <div class="subject" (click)="GoToSubjectPage(subject.id)">
             <h3 class="subject-text">
                 {{subject.name}}
             </h3>
@@ -24,21 +24,13 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form class="modalForm" >
+        <form class="modalForm" [formGroup]="addSubjectForm">
           <div class="modal-body">
-            <button class="btn" id="userMenuButton" data-toggle="dropdown">
-              Choose the subject year ▼
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" >1</a>
-              <a class="dropdown-item" >2</a>
-              <a class="dropdown-item" >3</a>
-            </div>
-            <input type="text" class="form-control titleInput" placeholder="Subject Name" />
+            <input type="text" class="form-control titleInput" placeholder="Subject Name" formControlName="name" />
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" class="btn btn-primary">Submit</button>
+            <button type="button" data-dismiss="modal" onclick="$('.modal').modal('hide')" class="btn btn-primary" (click)="AddSubject()">Submit</button>
           </div>
         </form>
       </div>
