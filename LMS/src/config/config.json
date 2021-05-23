@@ -1,5 +1,5 @@
 {
-    "apiUrls": { "forum": "https://lms-gateway.herokuapp.com",
+    "apiUrls": { "forum": "https://lms-gateway.herokuapp.com/forum",
                  "task": "https://lms-gateway.herokuapp.com"},
     "endpoints": {
         "GetTask": "/task/",
@@ -8,17 +8,21 @@
         "DeleteTask": "/task/",
         "EditTask": "/task/",
         "GetAllQuestions": "/task_question/task/",
+        "AssignQuestionToTask": "/task_question/",
+        "AddTaskQuestion": "/question/",
+        "DeleteTaskQuestion": "/question/",
+        "EditTaskQuestion": "/question/",
+        "AddAnswer": "/answer/",
 
-        "AllForums": "/forum/",
+        "AllForums": "/",
         "AllQuestions": "/question/all/",
         "AddQuestion": "/question/",
-        "AllComments": "/forum/question",
-        "AddComment": "/forum/addComment",
-        "DeletePost": "/forum/deleteQuestion",
-        "EditPostTitle": "/forum/updateQuestionTitle",
-        "EditPostContent": "/forum/updateQuestionContent",
-        "DeleteComment": "/forum/deleteComment",
-        "UpdateCommentContent": "/forum/updateCommentContent"
+        "AllComments": "/question/",
+        "AddComment": "/comment/",
+        "DeletePost": "/question/",
+        "EditPost": "/question/",
+        "DeleteComment": "/comment/delete/",
+        "UpdateCommentContent": "/comment/"
 
     }
 

@@ -68,7 +68,7 @@ export class ForumCommentsComponent implements OnInit {
     }
     public editPost() {
         var post: any = {};
-        post.id = this.id;
+        post.idQuestion = this.id;
         post.title = this.editPostForm.value.Title;
         post.content = this.editPostForm.value.Content;
 
@@ -76,7 +76,7 @@ export class ForumCommentsComponent implements OnInit {
     }
     public editComment() {
         var comment: any = {};
-        comment.id = this.selectedCommentId;
+        comment.idComment = this.selectedCommentId;
         comment.content = this.editCommentForm.value.Comment;
         this.forumManager.EditComment(comment);
     }

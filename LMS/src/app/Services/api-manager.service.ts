@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AppConfigService } from './app-config.service';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +11,8 @@ export class ApiManagerService {
     private endpoints;
     private httpOptions = {
         headers: new HttpHeaders({
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'responseType': 'text'
         })
     };
     constructor(private appConfigService: AppConfigService,
@@ -32,26 +33,11 @@ export class ApiManagerService {
         return this.http.get(this.baseURLs.forum + this.endpoints.AllQuestions + id, this.httpOptions);
     }
     public DeletePost(id) {
-        var params: any = new HttpParams().append('id', id);
-        
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
-        return this.http.delete(this.baseURLs.forum + this.endpoints.DeletePost, requestOptions);
+        return this.http.delete(this.baseURLs.forum + this.endpoints.DeletePost + id, this.httpOptions);
     }
     public EditPost(post) {
-        var params: any = new HttpParams().append('idQuestion', post.id).append('title', post.title);
-        
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
-        this.http.put(this.baseURLs.forum + this.endpoints.EditPostTitle, null, requestOptions).subscribe((data) => {
+        this.http.put(this.baseURLs.forum + this.endpoints.EditPost, JSON.stringify(post), this.httpOptions).subscribe((data) => {
             console.log(data);
-            var contentParams: any = new HttpParams().append('idQuestion', post.id).append('content', post.content);
-            
-            var requestOptions: any = {...this.httpOptions};
-            requestOptions.params = contentParams;
-            this.http.put(this.baseURLs.forum + this.endpoints.EditPostContent, null, requestOptions).subscribe((data) => {
-                console.log(data);
-            });
 
         });
     }
@@ -84,32 +70,18 @@ export class ApiManagerService {
         return this.http.post(this.baseURLs.forum + this.endpoints.AddQuestion, JSON.stringify(post), this.httpOptions);
     }
     public GetComments(postId) {
-        var params: any = new HttpParams().append('id', postId);
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
         
-        return this.http.get(this.baseURLs.forum + this.endpoints.AllComments, requestOptions);
+        return this.http.get(this.baseURLs.forum + this.endpoints.AllComments + postId, this.httpOptions);
     }
     public CreateComment(comment) {
-        var params: any = new HttpParams().append('idQuestion', comment.postId).append('content', comment.content);
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
-        
-        return this.http.post(this.baseURLs.forum + this.endpoints.AddComment, null, requestOptions);
+        return this.http.post(this.baseURLs.forum + this.endpoints.AddComment, JSON.stringify(comment), this.httpOptions);
     }
     public DeleteComment(commentId) {
-        var params: any = new HttpParams().append('idComment', commentId);
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
         
-        return this.http.delete(this.baseURLs.forum + this.endpoints.DeleteComment, requestOptions);
+        return this.http.delete(this.baseURLs.forum + this.endpoints.DeleteComment + commentId, this.httpOptions);
     }
     public EditComment(comment) {
-        var params: any = new HttpParams().append('idComment', comment.id).append('content', comment.content);
-        
-        var requestOptions: any = {...this.httpOptions};
-        requestOptions.params = params;
-        this.http.put(this.baseURLs.forum + this.endpoints.UpdateCommentContent, null, requestOptions).subscribe((data) => {
+        this.http.put(this.baseURLs.forum + this.endpoints.UpdateCommentContent, JSON.stringify(comment), this.httpOptions).subscribe((data) => {
             console.log(data);
         });
     }
@@ -126,6 +98,22 @@ export class ApiManagerService {
     }
     public GetAllQuestions(taskId) {
         return this.http.get(this.baseURLs.task + this.endpoints.GetAllQuestions + taskId, this.httpOptions);
+    }
+    public AddQuestion(question) {
+        return this.http.post(this.baseURLs.task + this.endpoints.AddTaskQuestion, JSON.stringify(question), this.httpOptions);
+    }
+    public EditTaskQuestion(question) {
+        return this.http.put(this.baseURLs.task + this.endpoints.EditTaskQuestion + question.id, JSON.stringify(question), this.httpOptions);
+    }
+    public DeleteTaskQuestion(id) {
+        return this.http.delete(this.baseURLs.task + this.endpoints.DeleteTaskQuestion + id, this.httpOptions);
+    }
+    public AddAnswer(answer) {
+        return this.http.post(this.baseURLs.task + this.endpoints.AddAnswer, JSON.stringify(answer), this.httpOptions);
+    }
+    
+    public AssignQuestionToTask(questionId, taskId) {
+        return this.http.post(this.baseURLs.task + this.endpoints.AssignQuestionToTask, JSON.stringify({questionId: questionId, taskId: taskId}), this.httpOptions);
     }
 
 }

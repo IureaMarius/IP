@@ -1,50 +1,27 @@
 <app-header></app-header>
 <div class="entire-exam">
-<div class="examdetails">
+<div class="examdetails" *ngIf="examData">
   <h3 class="examTitle">
-    EXAM NAME
+      {{examData.name}}
   </h3>
   <h5 class="examSubject">
     Subject
   </h5>
-  <div class="time"><b>starting time:</b> 2021-06-23T10:00:00</div>
-  <div class="time"><b>ending time:</b> 2021-06-23T12:00:00</div>
+  <div class="time"><b>starting time:</b> {{examData.startTime}} </div>
+  <div class="time"><b>ending time:</b> {{examData.endTime}} </div>
 </div>
 
-<div class="multiplechoice">
-  <div class="actualquestion">
-    Why?
-    Choose an answer  Choose an answer Choose an answer Choose an answer Choose an answer
-  </div>
-  <div class="answers">
-    <span><button>A</button></span>
-    <span><button>B</button></span>
-    <span><button>C</button></span>
-    <span><button>D</button></span>
-  </div>
-</div>
-<div class="trueFalse">
-  <div class="actualquestion">
-    Why?
-    True or False
-  </div>
-  <div class="answerstf">
-    <span><button>True</button> </span>
-    <span><button>False</button></span>
-  </div>
-</div>
 
-<div class="writeanswer">
-  <div class="actualquestion">
-    Why?
-  </div>
-  <div>
-  <input type="text" class="answerinput" name="answer">
+<div [formGroup]="answersForm" *ngIf="answersForm">
+    <div class="writeanswer" *ngFor="let question of questions; let i = index">
+      <div class="actualquestion">
+          {{question.content}}
+      </div>
+      <div>
+          <input type="text" class="answerinput" name="answer" formControlName="{{i}}">
+        </div>
     </div>
-  <div>
-    <button>submit</button>
-  </div>
 </div>
 
-<button class="submitresult">submit</button>
+<button class="submitresult" (click)="SubmitSolution()">submit</button>
   </div>

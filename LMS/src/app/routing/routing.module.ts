@@ -28,7 +28,7 @@ const routes: Routes = [
     { path: 'email-item', component: EmailPageItemComponent },
     { path: 'exam', component: ExamPageComponent },
     { path: 'exam-build/:id', component: ExamBuilderComponent },
-    { path: 'exam-taking-page', component: ExamTakingPageComponent },
+    { path: 'exam-taking-page/:id', component: ExamTakingPageComponent },
     { path: 'forum/user/:id', component: ForumUserComponent },
     { path: 'forum/board/:id/:postId', component: ForumCommentsComponent },
     { path: 'forum/board/:id', component: ForumBoardPostsComponent },
@@ -42,7 +42,7 @@ const routes: Routes = [
     { path: 'exam-build/assign', component: ExamAssignPageComponent },
     { path: 'examSelect', component: StudentExamSelectorComponent },
     { path: 'emailWrite', component: EmailWritingPageComponent},
-  {path: 'examResults', component: ExamResultsComponent}
+    { path: 'examResults/:id', component: ExamResultsComponent}
 ];
 
 

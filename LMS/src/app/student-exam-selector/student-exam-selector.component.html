@@ -2,9 +2,9 @@
 <div class="examContainer">
   <div *ngFor="let exam of examList" class="examListItem row">
     <div class="examWords">
-      <span class="examTitle">{{exam.Name}}</span>
+      <span class="examTitle">{{exam.name}}</span>
       <span class="examLogo"><img src="../../assets/exam-svgrepo-com.svg" class="examLogo"></span>
-      <span class="examDescription">Subject: {{exam.Subject}}</span>
+      <span class="examDescription">Subject: {{exam.subject}}</span>
 
     </div>
     <div class="rightExamButtons rowright">
@@ -12,10 +12,10 @@
         <img src="../../assets/statistics-svgrepo-com.svg" class="righticon">
         Statistics
       </a>
-      <button routerLink="/exam-taking-page" class="editbutton">
+      <button routerLink="/exam-taking-page/{{exam.id}}" class="editbutton">
         Take Exam
       </button>
-      <button routerLink="/examResults" class="editbutton">
+      <button routerLink="/examResults/{{exam.id}}" class="editbutton">
         See Results
       </button>
     </div>

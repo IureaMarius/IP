@@ -34,8 +34,32 @@ export class TaskManagerService {
             console.log(data);
         });
     }
+    public AddQuestion(question) {
+        return this.apiManager.AddQuestion(question);
+    }
+    public DeleteQuestion(id) {
+        return this.apiManager.DeleteTaskQuestion(id);
+    }
+    public AssignQuestionToTask(questionId, taskId) {
+        this.apiManager.AssignQuestionToTask(questionId, taskId).subscribe(data => {
+            console.log(data);
+        });
+    }
+    public GetTask(id) {
+        return this.apiManager.GetTask(id);
+    }
     public GetAllQuestions(taskId) {
         return this.apiManager.GetAllQuestions(taskId);
     }
+    public EditQuestion(question) {
+        return this.apiManager.EditTaskQuestion(question);
+    }
 
+    public SubmitSolution(answerList) {
+        for(var answer of answerList) {
+            this.apiManager.AddAnswer(answer).subscribe(data => {
+                console.log(data);
+            });
+        }
+    }
 }
