@@ -21,6 +21,8 @@ import {SubjectAdderComponent} from '../subject-adder/subject-adder.component';
 import {EmailWritingPageComponent} from '../email-writing-page/email-writing-page.component';
 import {EmailConfigPageComponent} from '../email-config-page/email-config-page.component';
 import {ExamResultsComponent} from '../exam-results/exam-results.component';
+import {ExamGraderStudentsComponent} from '../exam-grader-students/exam-grader-students.component';
+import {ExamGraderQuestionsComponent} from '../exam-grader-questions/exam-grader-questions.component';
 
 const routes: Routes = [
     { path: 'email-config', component: EmailConfigPageComponent},
@@ -39,8 +41,11 @@ const routes: Routes = [
     { path: 'subject/add/:id', component: SubjectAdderComponent},
     { path: 'subject/:id', component: SubjectPageComponent },
     { path: '', component: LoginPageComponent },
-    { path: 'exam-build/stats', component: ExamStatisticsComponent },
+    { path: 'exam/stats', component: ExamStatisticsComponent },
+    { path: 'exam/list', component: ExamGraderStudentsComponent},
+    { path: 'exam/assign/:id', component: ExamAssignPageComponent },
     { path: 'examSelect', component: StudentExamSelectorComponent },
+    { path: 'exam/list/questions', component: ExamGraderQuestionsComponent},
     { path: 'emailWrite', component: EmailWritingPageComponent},
     { path: 'examResults/:id', component: ExamResultsComponent}
 ];

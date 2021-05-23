@@ -1,0 +1,114 @@
+.examdetails {
+  max-width: 750px;
+  margin-left: 10em;
+  margin-top: 5%;
+  width: 50em;
+  background-color: #e1e7ea;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.examTitle {
+  font-size: 75px;
+}
+
+.examSubject {
+  margin-left: 8px;
+  font-size: 45px;
+}
+
+.time {
+  color: #777777;
+  margin-left: 10px;
+}
+
+.questionEditor {
+  display: flex;
+  flex-direction: column;
+  /*margin: 5%;*/
+  margin: 5% 5% 1%;
+  background-color: #e1e7ea;
+  text-align: center;
+  border: 2px solid #AAAAAA;
+  border-radius: 11px;
+}
+
+.questionTitle {
+  background-color: #bacdd6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.questionTitleText {
+  text-align: left;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.score {
+  text-align: right;
+}
+
+.questionTitleType {
+  min-width: 400px;
+  display: inline-block;
+  text-align: left;
+  margin-right: 60%;
+}
+
+.questionContent {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px 10px 30px;
+  border-bottom: solid #cbcbcb 2px;
+}
+
+.questionContentText {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.answer{
+  display: flex;
+  flex-direction: row;
+  padding:30px;
+  margin-left: -10px;
+  text-align: left;
+}
+
+.actualanswer{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 10px;
+  border-bottom: solid #cbcbcb 2px;
+}
+
+.grade{
+  margin-left: auto;
+}
+
+.editbutton {
+  padding: 10px;
+  margin-bottom: 40px;
+  width: 150px;
+  margin-left: 80%;
+  background-color: #3266a4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.editbutton:hover {
+  background-color: #9797a5;
+  transition: all 0.5s ease;
+}
