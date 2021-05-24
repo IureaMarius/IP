@@ -37,3 +37,7 @@
   color: #131212;
   background: #a29a98 linear-gradient(to bottom, #c3afab 5%, #e7dbd9 100%);
 }
+#page-title-box {
+
+    width: 100%;
+}

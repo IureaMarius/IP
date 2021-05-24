@@ -73,4 +73,23 @@ export class TaskManagerService {
             });
         }
     }
+    public GetAssignedStudents(id) {
+        return this.apiManager.GetAssignedStudents(id);
+    }
+    public GetStudentAnswers(taskId, studentId) {
+        return this.apiManager.GetStudentAnswers(taskId, studentId);
+    }
+    public SubmitPoints(pointsList) {
+        for(var points of pointsList) {
+            this.apiManager.SubmitPoints(points).subscribe(data => {
+                console.log(data);
+            },
+            (err) => {
+                console.log(err);
+                this.apiManager.EditPoints(points).subscribe(data => {
+                    console.log(data);
+                });
+            });
+        }
+    }
 }

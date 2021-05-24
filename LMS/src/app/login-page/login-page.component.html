@@ -7,6 +7,7 @@
       <img class="user-logo centerAlign" src="../../assets/logo omulet.png" />
       </div>
 
+      <h2 *ngIf="errorMessage" class="errorMessage">{{errorMessage}}</h2>
       <form (ngSubmit)="formSubmit()" class="row centerAlign form-group" [formGroup]="loginForm">
           <input type="text" class="form-control" placeholder="User name" formControlName="userName" />
           <input type="password" class="form-control" placeholder="Password (case sensitive)" formControlName="password" />

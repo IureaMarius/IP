@@ -44,7 +44,7 @@ export class ExamTakingPageComponent implements OnInit {
         var i = 0;
         for(var question of this.questions) {
             var answer: any = {};
-            answer.studentId = 89;
+            answer.studentId = 145;
             answer.questionId = question.id;
             answer.taskId = this.id;
             answer.content = this.answersForm.controls[i.toString()].value;

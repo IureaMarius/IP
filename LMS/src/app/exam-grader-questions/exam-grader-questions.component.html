@@ -1,113 +1,52 @@
 <app-header></app-header>
-<div class="examdetails">
+<div class="examdetails" *ngIf="examData">
   <h3 class="examTitle">
-    EXAM NAME
+      {{examData.name}}
   </h3>
   <h5 class="examSubject">
-    Subject
+      {{examData.subject}}
   </h5>
-  <div class="time"><b>starting time:</b> 2021-06-23T10:00:00</div>
-  <div class="time"><b>ending time:</b> 2021-06-23T12:00:00</div>
+  <div class="time"><b>starting time:</b> {{examData.startTime}}</div>
+  <div class="time"><b>ending time:</b> {{examData.endTime}}</div>
 </div>
 
-<div class="questionEditor">
+<form class="questionEditor" *ngIf="pointsForm" [formGroup]="pointsForm">
 
-  <div>
+  <div *ngFor="let answer of answers; let i = index">
     <div class="questionTitle">
     <span class="questionTitleText">
-        Question 1
+        Question {{i + 1}}
     </span>
       <span class="questionTitleType">
-          type: haha
+          type: {{answer.question.questionType}}
     </span>
       <span class="score">
-          34 pct
+          {{answer.question.maxPoints}} pct
     </span>
     </div>
     <div class="questionContent">
     <span class="questionContentText">
-        cerinta???
+        {{answer.question.content}}
     </span>
     </div>
     <div class="actualanswer">
     <span class="questionContentText">
-        actual answer
+        {{answer.question.correctAnswer}}
     </span>
     </div>
 
     <div class="answer">
     <span>
-      Student's answer
+        Student's answer: <i>{{answer.content}} </i>
     </span>
-      <input type="text" class="grade" placeholder="points" formControlName="content"/>
-    </div>
-  </div>
-
-  <div>
-    <div class="questionTitle">
-    <span class="questionTitleText">
-        Question 2
-    </span>
-      <span class="questionTitleType">
-          type: haha
-    </span>
-      <span class="score">
-          34 pct
-    </span>
-    </div>
-    <div class="questionContent">
-    <span class="questionContentText">
-        cerinta???
-    </span>
-    </div>
-    <div class="actualanswer">
-    <span class="questionContentText">
-        actual answer
-    </span>
-    </div>
-
-    <div class="answer">
-    <span>
-      Student's answer
-    </span>
-      <input type="text" class="grade" placeholder="points" formControlName="content"/>
-    </div>
-  </div>
-
-  <div>
-    <div class="questionTitle">
-    <span class="questionTitleText">
-        Question 3
-    </span>
-      <span class="questionTitleType">
-          type: haha
-    </span>
-      <span class="score">
-          34 pct
-    </span>
-    </div>
-    <div class="questionContent">
-    <span class="questionContentText">
-        cerinta???
-    </span>
-    </div>
-    <div class="actualanswer">
-    <span class="questionContentText">
-        actual answer
-    </span>
-    </div>
-
-    <div class="answer">
-    <span>
-      Student's answer
-    </span>
-      <input type="text" class="grade" placeholder="points" formControlName="content"/>
+    <input type="text" class="grade" placeholder="points" formControlName="{{i}}" />
     </div>
   </div>
 
 
 
-</div>
 
-<button class="editbutton">Submit Score</button>
+</form>
+
+<button class="editbutton" (click)="SubmitPoints()">Submit Score</button>
 

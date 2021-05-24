@@ -144,6 +144,40 @@ export class ApiManagerService {
     public CreateSubject(subject) {
         return this.http.post(this.baseURLs.content + this.endpoints.CreateSubject, JSON.stringify(subject), this.httpOptions);
     }
+    public GetAssignedStudents(taskId) {
+        return this.http.get(this.baseURLs.content + this.endpoints.GetAssignedStudents + taskId, this.httpOptions);
+    }
+    public GetStudentAnswers(taskId, studentId) {
+        return this.http.get(this.baseURLs.content + this.endpoints.GetStudentAnswersPrefix + taskId + this.endpoints.GetStudentAnswersSuffix + studentId, this.httpOptions);
+    }
+
+    public SubmitPoints(points) {
+        return this.http.post(this.baseURLs.task + this.endpoints.SubmitPoints, JSON.stringify(points), this.httpOptions);
+    }
+    public EditPoints(points) {
+        return this.http.put(this.baseURLs.task + this.endpoints.SubmitPoints, JSON.stringify(points), this.httpOptions);
+    }
+
+    public ConfigSMTP(config) {
+        return this.http.post(this.baseURLs.mail + this.endpoints.ConfigSMTP, JSON.stringify(config), this.httpOptions);
+    }
+    public ConfigPOP(config) {
+        return this.http.post(this.baseURLs.mail + this.endpoints.ConfigPOP, JSON.stringify(config), this.httpOptions);
+    }
+    public GetAllEmails() {
+        return this.http.get(this.baseURLs.mail + this.endpoints.GetAllEmails, this.httpOptions);
+    }
+    public SendTextEmail(email) {
+        return this.http.post(this.baseURLs.mail + this.endpoints.SendTextEmail, JSON.stringify(email), this.httpOptions);
+    }
+
+    public Login(creds) {
+        return this.http.post(this.baseURLs.auth + this.endpoints.Login, JSON.stringify(creds), this.httpOptions);
+    }
+    public Register(creds) {
+        return this.http.post(this.baseURLs.auth + this.endpoints.Register, JSON.stringify(creds), this.httpOptions);
+    }
+
 
 
 }

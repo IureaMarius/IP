@@ -9,6 +9,7 @@ export class SubjectManagerService {
     constructor(private apiManager: ApiManagerService,
                 private location: Location) {
     }
+    public selectedEmail;
 
     public GetSubjects() {
         return this.apiManager.GetAllSubjects();
@@ -42,6 +43,26 @@ export class SubjectManagerService {
     }
     public CreateSubject(subject) {
         return this.apiManager.CreateSubject(subject); 
+    }
+
+    public ConfigSMTP(config) {
+        return this.apiManager.ConfigSMTP(config);
+    }
+    public ConfigPOP(config) {
+        return this.apiManager.ConfigPOP(config);
+    }
+    public GetAllEmails() {
+        return this.apiManager.GetAllEmails();
+    }
+    public SendTextEmail(email) {
+        return this.apiManager.SendTextEmail(email);
+    }
+    
+    public Login(creds) {
+        return this.apiManager.Login(creds);
+    }
+    public Register(creds) {
+        return this.apiManager.Register(creds);
     }
     
     

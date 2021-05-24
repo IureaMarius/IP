@@ -42,10 +42,10 @@ const routes: Routes = [
     { path: 'subject/:id', component: SubjectPageComponent },
     { path: '', component: LoginPageComponent },
     { path: 'exam/stats', component: ExamStatisticsComponent },
-    { path: 'exam/list', component: ExamGraderStudentsComponent},
+    { path: 'exam/list/:id', component: ExamGraderStudentsComponent},
     { path: 'exam/assign/:id', component: ExamAssignPageComponent },
     { path: 'examSelect', component: StudentExamSelectorComponent },
-    { path: 'exam/list/questions', component: ExamGraderQuestionsComponent},
+    { path: 'exam/list/questions/:examId/:studentId', component: ExamGraderQuestionsComponent},
     { path: 'emailWrite', component: EmailWritingPageComponent},
     { path: 'examResults/:id', component: ExamResultsComponent}
 ];

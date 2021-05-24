@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="emails-header">
 <h1>Email</h1>
-<button class="emailcontrol" routerLink='/emailWrite'>
+<button class="emailcontrol" (click)="ComposeEmail()">
   + Compose
 </button>
 </div>
@@ -26,7 +26,7 @@
             <img src="../../assets/trash.svg" class="icon" >
              Delete
           </button>
-          <button class="emailcontrol" routerLink='/emailWrite' data-dismiss="modal">
+          <button class="emailcontrol" (click)="ReplyEmail()" data-dismiss="modal">
             <img src="../../assets/reply.svg" class="icon">
             Reply
           </button></h5>

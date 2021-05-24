@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SubjectManagerService } from '../Services/subject-manager.service';
 
 @Component({
     selector: 'app-login-page',
@@ -10,8 +11,10 @@ import { Router } from '@angular/router';
 export class LoginPageComponent implements OnInit {
 
     constructor(private fb: FormBuilder,
+                private subjectManager: SubjectManagerService,
                 private router: Router) { }
-    public loginForm;
+    public loginForm;                                                  
+    public errorMessage;
 
     ngOnInit(): void {
         this.loginForm = this.fb.group({
@@ -20,8 +23,17 @@ export class LoginPageComponent implements OnInit {
         });
     }
     formSubmit() {
-        console.log('checking credentials, Logged in!');
-        this.router.navigate(['/subjects']);
+        var creds: any = {};
+        creds.login = this.loginForm.controls.userName.value;
+        creds.password = this.loginForm.controls.password.value;
+        this.subjectManager.Login(creds).subscribe((data) => {
+            console.log(data);
+            this.router.navigate(['/subjects']);
+        },
+        (err) => {
+            console.log(err);
+            this.errorMessage = 'Login Failed!';
+        });
     }
 
 }

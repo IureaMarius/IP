@@ -1,7 +1,9 @@
 {
     "apiUrls": { "forum": "https://lms-gateway.herokuapp.com/forum",
                  "task": "https://lms-gateway.herokuapp.com",
-                 "content": "https://lms-gateway.herokuapp.com"
+                 "content": "https://lms-gateway.herokuapp.com",
+                 "mail": "https://lms-gateway.herokuapp.com/mail",
+                 "auth": "https://lms-gateway.herokuapp.com/auth"
     },
     "endpoints": {
         "GetTask": "/task/",
@@ -33,7 +35,19 @@
         "CreateCourse": "/course/",
         "AddContent": "/content_block/",
         "SetCourseToSubject": "/subject_course/",
-        "CreateSubject": "/subject/"
+        "CreateSubject": "/subject/",
+        "GetAssignedStudents": "/task_student/task/",
+        "GetStudentAnswersPrefix": "/answer/task/",
+        "GetStudentAnswersSuffix": "/student/",
+        "SubmitPoints": "/score_answer/",
+
+        "ConfigSMTP": "/configSMTP/",
+        "ConfigPOP": "/configPOP/",
+        "GetAllEmails": "/getEmails/",
+        "SendTextEmail": "/send_text_email/",
+
+        "Login": "/authenticate/",
+        "Register": "/register/"
     }
 
 }

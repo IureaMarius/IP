@@ -1,13 +1,13 @@
 <app-header></app-header>
-<div class="examdetails">
+<div class="examdetails" *ngIf="examData">
   <h3 class="examTitle">
-    EXAM NAME
+      {{examData.name}}
   </h3>
   <h5 class="examSubject">
-    Subject
+      {{examData.subject}}
   </h5>
-  <div class="time"><b>starting time:</b> 2021-06-23T10:00:00</div>
-  <div class="time"><b>ending time:</b> 2021-06-23T12:00:00</div>
+  <div class="time"><b>starting time:</b> {{examData.startTime}}</div>
+  <div class="time"><b>ending time:</b> {{examData.endTime}}</div>
 </div>
 <div class="results-list">
   <div class="result-row" id="title-row">
@@ -17,40 +17,15 @@
     <span class="group">GROUP</span>
     <span class="year">YEAR</span>
   </div>
-  <a routerLink="/exam/list/questions">
-    <div class="result-row">
-      <span class="id">1</span>
-      <span class="name">sample</span>
-      <span class="surname">sample</span>
-      <span class="group">e4</span>
-      <span class="year">2</span>
-    </div>
-  </a>
-  <a routerLink="/exam/list/questions">
-    <div class="result-row">
-      <span class="id">1</span>
-      <span class="name">sample</span>
-      <span class="surname">sample</span>
-      <span class="group">e4</span>
-      <span class="year">2</span>
-    </div>
-  </a>
-  <a routerLink="/exam/list/questions">
-    <div class="result-row">
-      <span class="id">1</span>
-      <span class="name">sample</span>
-      <span class="surname">sample</span>
-      <span class="group">e4</span>
-      <span class="year">2</span>
-    </div>
-  </a>
-  <a routerLink="/exam/list/questions">
-    <div class="result-row">
-      <span class="id">1</span>
-      <span class="name">sample</span>
-      <span class="surname">sample</span>
-      <span class="group">e4</span>
-      <span class="year">2</span>
-    </div>
-  </a>
+  <div *ngFor="let student of students">
+      <a *ngIf="examData" routerLink="/exam/list/questions/{{examData.id}}/{{student.student.id}}" >
+        <div class="result-row">
+            <span class="id">{{student.student.id}}</span>
+            <span class="name">{{student.student.name}}</span>
+            <span class="surname">{{student.student.name}}</span>
+          <span class="group">e4</span>
+          <span class="year">2</span>
+        </div>
+      </a>
+  </div>
 </div>
