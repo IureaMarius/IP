@@ -16,7 +16,7 @@ export class ApiManagerService {
         })
     };
     constructor(private appConfigService: AppConfigService,
-                private http: HttpClient) { 
+                private http: HttpClient) {
         this.baseURLs = appConfigService.appConfig.apiUrls;
         this.endpoints = appConfigService.appConfig.endpoints;
     }
@@ -45,7 +45,7 @@ export class ApiManagerService {
     public GetUserInfo(userId) {
         console.log(userId);
         var User = {
-            Name: 'Ciobi',
+            Name: 'Professor Template',
             PostsCount: 99,
             CommentCount: 1235,
             ProfilePicture: 'https://avatars.githubusercontent.com/u/99944?s=400&v=4',
@@ -66,18 +66,18 @@ export class ApiManagerService {
 
 
     public CreatePost(post) {
-        
+
         return this.http.post(this.baseURLs.forum + this.endpoints.AddQuestion, JSON.stringify(post), this.httpOptions);
     }
     public GetComments(postId) {
-        
+
         return this.http.get(this.baseURLs.forum + this.endpoints.AllComments + postId, this.httpOptions);
     }
     public CreateComment(comment) {
         return this.http.post(this.baseURLs.forum + this.endpoints.AddComment, JSON.stringify(comment), this.httpOptions);
     }
     public DeleteComment(commentId) {
-        
+
         return this.http.delete(this.baseURLs.forum + this.endpoints.DeleteComment + commentId, this.httpOptions);
     }
     public EditComment(comment) {
@@ -100,7 +100,7 @@ export class ApiManagerService {
         return this.http.delete(this.baseURLs.task + this.endpoints.DeleteTask + id, this.httpOptions);
     }
     public EditTask(task) {
-        return this.http.put(this.baseURLs.task + this.endpoints.EditTask + task.id, JSON.stringify(task), this.httpOptions); 
+        return this.http.put(this.baseURLs.task + this.endpoints.EditTask + task.id, JSON.stringify(task), this.httpOptions);
     }
     public GetAllQuestions(taskId) {
         return this.http.get(this.baseURLs.task + this.endpoints.GetAllQuestions + taskId, this.httpOptions);
@@ -117,7 +117,7 @@ export class ApiManagerService {
     public AddAnswer(answer) {
         return this.http.post(this.baseURLs.task + this.endpoints.AddAnswer, JSON.stringify(answer), this.httpOptions);
     }
-    
+
     public AssignQuestionToTask(questionId, taskId) {
         return this.http.post(this.baseURLs.task + this.endpoints.AssignQuestionToTask, JSON.stringify({questionId: questionId, taskId: taskId}), this.httpOptions);
     }
@@ -126,7 +126,7 @@ export class ApiManagerService {
         return this.http.get(this.baseURLs.content + this.endpoints.GetAllSubjects, this.httpOptions);
     }
     public GetSubject(id) {
-        return this.http.get(this.baseURLs.content + this.endpoints.GetSubject + id, this.httpOptions); 
+        return this.http.get(this.baseURLs.content + this.endpoints.GetSubject + id, this.httpOptions);
     }
     public CreateCourse(course) {
         var sentCourse = {
