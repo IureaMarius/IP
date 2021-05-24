@@ -30,7 +30,9 @@ export class EmailPageComponent implements OnInit {
         this.router.navigate(['/emailWrite/']);
     }
     public ComposeEmail() {
-        this.subjectManager.selectedEmail = null;
+        var email: any = {};
+        email.to = this.emails[0].to;
+        this.subjectManager.selectedEmail = email;
         this.router.navigate(['/emailWrite/']);
     }
 

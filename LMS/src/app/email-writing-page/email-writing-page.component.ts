@@ -21,7 +21,7 @@ export class EmailWritingPageComponent implements OnInit {
             subject: ['', Validators.required],
             content: ['', Validators.required],
         });
-        if(this.selectedEmail) {
+        if(this.selectedEmail.subject) {
             this.sendEmailForm = this.fb.group({
                 to: [this.selectedEmail.from, Validators.required],
                 subject: ['[RE] ' + this.selectedEmail.subject, Validators.required],
